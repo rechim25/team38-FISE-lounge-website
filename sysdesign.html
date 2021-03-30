@@ -5,156 +5,191 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-  <head>
-    <title>System Design - Team 38 - IBM2 FISE</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <div id="page-wrapper">
-      <!-- Header -->
-      <header id="header">
-        <h1 id="logo"><a href="index.html">IBM2 FISE</a></h1>
-        <nav id="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="uidesign.html">UI Design</a></li>
-            <li><a href="sysdesign.html">System Design</a></li>
-            <li><a href="requirements.html">Requirements</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="implementation.html">Implementation</a></li>
-            <li><a href="testing.html">Testing</a></li>
-            <li><a href="evaluation.html">Evaluation</a></li>
-            <li><a href="appendices.html">Appendices</a></li>
-            <li><a href="legal.html">Legal</a></li>
-        </nav>
-      </header>
 
-      <!-- Main -->
-      <div id="main" class="wrapper style1">
-        <div class="container">
-          <header class="major">
-            <h2>System Design</h2>
-          </header>
+<head>
+  <title>System Design - Team 38 - IBM2 FISE</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+</head>
 
-          <!-- Content -->
-          <section id="content">
-            <h3>System Architecture Diagram</h3>
-            <a href="images/sysdesign/fise-sad-v4-FISE-Lounge.png" class="image fit"><img
-                src="images/sysdesign/fise-sad-v4-FISE-Lounge.png" alt="" /></a>
-            <p>
-            The <b>Application</b> will run in the browser of IoT and household devices. These devices will communicate with our
-            application endpoint to fetch the necessary static assets such as JS, CSS and HTML to render the application in the
+<body class="is-preload">
+  <div id="page-wrapper">
+    <!-- Header -->
+    <header id="header">
+      <h1 id="logo"><a href="index.html">IBM2 FISE</a></h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="uidesign.html">UI Design</a></li>
+          <li><a href="sysdesign.html">System Design</a></li>
+          <li><a href="requirements.html">Requirements</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
+          <li><a href="testing.html">Testing</a></li>
+          <li><a href="evaluation.html">Evaluation</a></li>
+          <li><a href="appendices.html">Appendices</a></li>
+          <li><a href="legal.html">Legal</a></li>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <div id="main" class="wrapper style1">
+      <div class="container">
+        <header class="major">
+          <h2>System Design</h2>
+        </header>
+
+        <!-- Content -->
+        <section id="content">
+          <h3>System Architecture Diagram</h3>
+          <a href="images/sysdesign/fise-sad-v4-FISE-Lounge.png" class="image fit"><img
+              src="images/sysdesign/fise-sad-v4-FISE-Lounge.png" alt="" /></a>
+          <p>
+            The <b>Application</b> will run in the browser of IoT and household devices. These devices will communicate
+            with our
+            application endpoint to fetch the necessary static assets such as JS, CSS and HTML to render the application
+            in the
             browser.
-            </p>
-            <p>
-              The <b>Server</b> exposes an API used for modifying or retrieving consumer or contact data from the MongoDB database. This API also
-              serves as a proxy for interacting with external services such as IBM Watson and email or SMS APIs. On the other hand, the server also contains the UI dashboard pages (served using Next.js) from which an administrator
-              can change a consumer’s account.
-            </p>
-            <p>
-              IoT and household devices can directly interact with the Ask Bob services that can run locally. The FISE Ask Bob
-              service exposes an API for natural language processing and interpretation, serving as an alternative to IBM Watson’s
-              Assistant. It provides additional functionality through the Ask Bob plugins that connects Ask Bob to other
-              applications
-              in the FISE Ecosystem such as Concierge. Therefore, by enabling the integration of the FISE ecosystem, this allows our
-              consumers to interact with FISE APIs through voice commands.
-            </p>
-            <p>
-              Devices also directly communicate with integrated Plugins that are directly available from the main page. Plugin
-              examples include: BBC live news feed, embedded online games, Ask Bob NLP model training, embedded videos. They have
-              been designed to be easily extended by developers depending on target consumer needs.
-            </p>
-            <p>
+          </p>
+          <p>
+            The <b>Server</b> exposes an API used for modifying or retrieving consumer or contact data from the MongoDB
+            database. This API also
+            serves as a proxy for interacting with external services such as IBM Watson and email or SMS APIs. On the
+            other hand, the server also contains the UI dashboard pages (served using Next.js) from which an
+            administrator
+            can change a consumer’s account.
+          </p>
+          <p>
+            IoT and household devices can directly interact with the Ask Bob services that can run locally. The FISE Ask
+            Bob
+            service exposes an API for natural language processing and interpretation, serving as an alternative to IBM
+            Watson’s
+            Assistant. It provides additional functionality through the Ask Bob plugins that connects Ask Bob to other
+            applications
+            in the FISE Ecosystem such as Concierge. Therefore, by enabling the integration of the FISE ecosystem, this
+            allows our
+            consumers to interact with FISE APIs through voice commands.
+          </p>
+          <p>
+            Devices also directly communicate with integrated plugins that are directly available from the main page.
+            Plugin
+            examples include: BBC live news feed, embedded online games, Ask Bob NLP model training, embedded videos.
+            They have
+            been designed to be easily extended by developers depending on target consumer needs.
+          </p>
+          <p>
             Further work will enable Gesture Interfaces to run with our application.
-            </p>
-            <p>
-              All the main services above can be run locally using <strong>Docker</strong> containers: 
-              server, application endpoint, database, Ask Bob and Concierge, 
-              thereofre achieving complete locality of user data. 
-            </p>
-            <p>
-            Reason: privacy-safety was a very important aspect of our features list as we would like our application to be deployed
-            in i.e. care homes as well. We believe this can only be truly achieved if direct user data does not leave the local
-            environment. We thus decided to give the option of minimizing transfer of sensitive data to external API’s by enabling
-            Ask Bob to run locally together with our Database and Server. We think this will provide a good incentive for care homes
+          </p>
+          <p>
+            All the main services above can be run locally using <strong>Docker</strong> containers:
+            server, application endpoint, database, Ask Bob and Concierge,
+            therefore achieving complete locality of user data.
+          </p>
+          <p>
+            Reason: privacy-safety was a very important aspect of our features list as we would like our application to
+            be deployed
+            in e.g. care homes as well. We believe this can only be truly achieved if direct user data does not leave
+            the local
+            environment. We thus decided to give the option of minimizing transfer of sensitive data to external API’s
+            by enabling
+            Ask Bob to run locally together with our Database and Server. We think this will provide a good incentive
+            for care homes
             to make use of our application.
-            </p>
+          </p>
 
-            <h3>Entity Relationship Diagram</h3>
-            <a href="images/sysdesign/entity_rel_diagram.jpg" class="image fit"><img src="images/sysdesign/entity_rel_diagram.jpg" alt="" /></a>
-            <p>
-              Every entity has an <code>_id</code> field that represents the object id of the instance at creation. It is automatically generated
-              by MongoDB.
-            </p>
-            <p>
-            <b>User</b> represents the account administrators of consumers, that have access to dashboard and can modify Consumer data
-              fields.
-            </p>
-            <p>
-              Salt and hash fields are parameters used for encrypting and decrypting the user password using the Node.js Crypto
-              module.
-            </p>
-            <p>
-              <b>Consumer</b> entity contains multiple options such as <code>isCloudEnabled</code>, <code>isWatsonTtsEnabled</code> that allow the customization of
-              the degree of privacy the consumer benefits from. First field decides whether the consumer will use IBM Watson Assistant
-              & Speech-to-Text services or FISE Ask Bob for voice commands and emergency messages. <code>isWatsonTtsEnabled</code> chooses
-              between speech synthesis using IBM Watson Text-to-Speech or WebAPI’s Speech Synthesizer module which runs locally in the
-              browser. Thus, when both options are set to “false”, the application will only use services that are running locally, improving
-              privacy-safety.
-            </p>            
-            <p>
-              Logs field keep track of consumer usage loads for allowing further work on API load balancing (i.e. with calls).
-            </p>
-            <p>
-              <b>Background</b> entity represents the custom images that are to be displayed as backgrounds for the consumer in the
-              application. If the image is an external image source it will be stored as the URL of that source. If <code>isVR</code> 
-              is set to "true" the image will be interactive.
-            </p>
-            <p>
-              <b>Contact</b> entity has a <code>profileImage</code> field that represents the profile image to be displayed for its corresponding
-              consumer in the dashboard.
-            </p>
-            <p>
-              The phone and email fields of the contacts are very important as they allow the video-call interaction between them and
-              consumers. When a call is initiated, an invitation is sent to their phone number and or email.
-            </p>
+          <h3>Entity Relationship Diagram</h3>
+          <a href="images/sysdesign/entity_rel_diagram.jpg" class="image fit"><img
+              src="images/sysdesign/entity_rel_diagram.jpg" alt="" /></a>
+          <p>
+            Every entity has an <code>_id</code> field that represents the object id of the instance at creation. It is
+            automatically generated
+            by MongoDB.
+          </p>
+          <p>
+            <b>User</b> represents the account administrators of consumers, that have access to dashboard and can modify
+            Consumer data
+            fields.
+          </p>
+          <p>
+            Salt and hash fields are parameters used for encrypting and decrypting the user password using the Node.js
+            Crypto
+            module.
+          </p>
+          <p>
+            <b>Consumer</b> entity contains multiple options such as <code>isCloudEnabled</code>,
+            <code>isWatsonTtsEnabled</code> that allow the customization of
+            the degree of privacy the consumer benefits from. First field decides whether the consumer will use IBM
+            Watson Assistant
+            & Speech-to-Text services or FISE Ask Bob for voice commands and emergency messages.
+            <code>isWatsonTtsEnabled</code> chooses
+            between speech synthesis using IBM Watson Text-to-Speech or WebAPI’s Speech Synthesizer module which runs
+            locally in the
+            browser. Thus, when both options are set to “false”, the application will only use services that are running
+            locally, improving
+            privacy-safety.
+          </p>
+          <p>
+            Logs field keeps track of consumer usage loads for allowing further work on API load balancing (i.e. with
+            calls).
+          </p>
+          <p>
+            <b>Background</b> entity represents the custom images that are to be displayed as backgrounds for the
+            consumer in the
+            application. If the image is an external image source it will be stored as the URL of that source. If
+            <code>isVR</code>
+            is set to "true" the image will be interactive.
+          </p>
+          <p>
+            <b>Contact</b> entity has a <code>profileImage</code> field that represents the profile image to be
+            displayed for its corresponding
+            consumer in the dashboard.
+          </p>
+          <p>
+            The phone and email fields of the contacts are very important as they allow the video-call interaction
+            between them and
+            consumers. When a call is initiated, an invitation is sent to their phone number and or email.
+          </p>
 
-            <h3>OTC Login Sequence Diagram</h3>
-            <p>
-              Below is a sequence diagram describing how a new consumer uses a very simple and accessible one-time login system
-              using
-              a One-Time Code. The One-Time Code is composed of 3 real words, making it easy to remember in case it needs to be
-              reentered (the admin can refresh the OTC).
-            </p>
-            <a href="images/sysdesign/otc_login_sequence.jpg" class="image fit"><img src="images/sysdesign/otc_login_sequence.jpg" alt="" /></a>
+          <h3>OTC Login Sequence Diagram</h3>
+          <p>
+            Below is a sequence diagram describing how a new consumer uses a very simple and accessible one-time login
+            system
+            using
+            a One-Time Code. The One-Time Code is composed of 3 real words, making it easy to remember in case it needs
+            to be
+            reentered (the admin can refresh the OTC).
+          </p>
+          <a href="images/sysdesign/otc_login_sequence.jpg" class="image fit"><img
+              src="images/sysdesign/otc_login_sequence.jpg" alt="" /></a>
 
-            <h3>Voice Commands Watson Sequence Diagram</h3>
-            <p>
-            Below is the sequence diagram for how a consumer uses voices commands when opting for all IBM Watson services (IBM
-            Speech-to-Text & Watson Assistant – when cloud features are enabled, IBM Text-to-Speech when local speech synthesis is
+          <h3>Voice Commands Watson Sequence Diagram</h3>
+          <p>
+            Below is the sequence diagram for how a consumer uses voice commands when opting for all IBM Watson services
+            (IBM
+            Speech-to-Text & Watson Assistant – when cloud features are enabled, IBM Text-to-Speech when local speech
+            synthesis is
             disabled).
-            </p>
-            <a href="images/sysdesign/voice_commands_watson_sequence.jpg" class="image fit"><img src="images/sysdesign/voice_commands_watson_sequence.jpg" alt="" /></a>
+          </p>
+          <a href="images/sysdesign/voice_commands_watson_sequence.jpg" class="image fit"><img
+              src="images/sysdesign/voice_commands_watson_sequence.jpg" alt="" /></a>
 
-            <h3>Voice Commands AskBob Sequence Diagram</h3>
-            <p>
-              Below is the sequence diagram for how a consumer uses voices commands when opting for the privacy-safe services of Ask
-              Bob. Speech transcription to text and interpretation is handled locally by Ask Bob, whereas text to speech synthesis is
-              done by the Speech Synthesis WebAPI module, available in browsers.
-            </p>
-            <a href="images/sysdesign/voice_command_askbob.jpg" class="image fit"><img
-                src="images/sysdesign/voice_command_askbob.jpg" alt="" /></a>
+          <h3>Voice Commands AskBob Sequence Diagram</h3>
+          <p>
+            Below is the sequence diagram for how a consumer uses voice commands when opting for the privacy-safe
+            services of Ask
+            Bob. Speech transcription to text and interpretation is handled locally by Ask Bob, whereas text to speech
+            synthesis is
+            done by the Speech Synthesis WebAPI module, available in browsers.
+          </p>
+          <a href="images/sysdesign/voice_command_askbob.jpg" class="image fit"><img
+              src="images/sysdesign/voice_command_askbob.jpg" alt="" /></a>
 
-            <h3>Site & Application map</h3>
-                
+          <h3>Site & Application map</h3>
+
           <div class="w3-content w3-display-container">
             <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
             <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
@@ -172,43 +207,46 @@
             </span>
           </div>
 
-            <h3>Extra - Integrated FISE Ecosystem Architecture</h3>
-            <p>The following architecture diagram shows the integration between the FISE portfolio of projects.
-              If you want to learn more about FISE <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team25">Concierge</a> and <a href="https://github.com/UCL-COMP0016-2020-Team-39/AskBob">Askbob</a> we would recommend you to visit their respective
-              websites.
-            </p>
-            <a href="images/sysdesign/FISE-wider-eco.jfif" class="image fit"><img
-                src="images/sysdesign/FISE-wider-eco.jfif" alt="" /></a>
-            <p>
-          </section>
-        </div>
+          <h3>Extra - Integrated FISE Ecosystem Architecture</h3>
+          <p>The following architecture diagram shows the integration between the FISE portfolio of projects.
+            If you want to learn more about FISE <a
+              href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team25">Concierge</a> and <a
+              href="https://github.com/UCL-COMP0016-2020-Team-39/AskBob">Askbob</a> we would recommend you to visit
+            their respective
+            websites.
+          </p>
+          <a href="images/sysdesign/FISE-wider-eco.jfif" class="image fit"><img
+              src="images/sysdesign/FISE-wider-eco.jfif" alt="" /></a>
+          <p>
+        </section>
       </div>
-      
-
-      <!-- Footer -->
-      <footer id="footer">
-        <ul class="icons">
-          <li>
-            <a href="https://github.com/UCL-COMP0016-Team-38/FISE-Lounge" class="icon brands alt fa-github"
-              ><span class="label">GitHub</span></a
-            >
-          </li>
-        </ul>
-        <ul class="copyright">
-          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
-      </footer>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/slider.js"></script>
-  </body>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li>
+          <a href="https://github.com/UCL-COMP0016-Team-38/FISE-Lounge" class="icon brands alt fa-github"><span
+              class="label">GitHub</span></a>
+        </li>
+      </ul>
+      <ul class="copyright">
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/slider.js"></script>
+</body>
+
 </html>
