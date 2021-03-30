@@ -162,8 +162,8 @@
             <div class="row" style="margin-bottom: 30px !important; justify-content: center">
               <div class="col-lg-10">
                 <h2 style=" padding-bottom: 5px; margin-bottom: 10px;">UI Design Principles</h2>
-                <p style="margin-bottom: 0px;">Main objective of our UI design is to be suitable for elderly
-                  or people with less-technical expertise. For this reason,
+                <p style="margin-bottom: 0px;">The main objective of our UI design is to be suitable for the elderly
+                  or people with less technical expertise. For this reason,
                   we have extensively researched UI alternatives and came up
                   with a design that is based on gerontological principles.
                 </p>
@@ -190,7 +190,7 @@
               <div class="col-lg-4">
                 <p>
                   To improve visibility, we have provided good contrast for buttons
-                  using a dark glassy panel with white colored icons. This will
+                  using a dark glassy panel with white coloured icons. This will
                   guarantee button visibility on all backgrounds.
                 </p>
               </div>
@@ -256,9 +256,9 @@
               <div class="col-lg-10">
                 <h2 style=" padding-bottom: 5px; margin-bottom: 10px;">UI Implementation Principles</h2>
                 <p style="margin-bottom: 0px;">
-                  UI has been implementation has been carried on with the intent
-                  of allowing further development and improvement in the future and
-                  thus have worked with the principles of code reusability. Reusability
+                  UI implementation has been carried out with the intent
+                  of allowing further development and improvement in the future, and
+                  thus we have worked with the principles of code reusability. Reusability
                   guarantees overall design consistency.
                 </p>
               </div>
@@ -270,10 +270,10 @@
                   page are implemented. The <code>CommandButton</code> component is used to wrap all
                   command buttons and provide consistency in design.</p>
                 <p>
-                  The component takes multiple parameters make it modular and reusable such
-                  as placement coordinates with respect to the main page (<code>left</code>, <code>bottom</code>, etc.)
+                  The component takes multiple parameters which make it modular and reusable - e.g. 
+                  placement coordinates with respect to the main page (<code>left</code>, <code>bottom</code>, etc.)
                   and box roundness properties. A custom function can be provided that is triggered
-                  when clicked. Very importantly is that we allow other components to be wrapped by
+                  when clicked. It's very important that we allow other components to be wrapped by
                   it using the <code>children</code> attribute.
                 </p>
               </div>
@@ -289,9 +289,9 @@
               </div>
               <div class="col-lg-5">
                 <p>
-                  For instance, the "change background" button from our main page makes use of this component.
+                  For instance, the "change background" button from our main page makes use of this component, 
                   by specifying the <code>top=0</code> and <code>left=0</code>, meaning top-left corner.
-                  and setting the <code>bottomRight</code> corner to be rounded. It also, provides a custom
+                  and setting the <code>bottomRight</code> corner to be rounded. It also provides a custom
                   function <code>handleChangeScene</code> that will change the currently selected background
                   when the button is clicked.
                 </p>
@@ -314,13 +314,13 @@
 
                   Jitsi is customizable. We have added multilingual support for the video-calling frame based on the
                   detected language of
-                  the browser, simplified the command interface of Jitsi , background colors and more through the API.
+                  the browser, simplified the command interface of Jitsi, background colors and more through the API.
                 </p>
                 <p>
                   When a consumer initiates a call with a contact, a new Jitsi room will be created and associated to
                   that consumer . At this
                   time, a request is
-                  transmitted to our server to send an invite to the chosen contact by email and or SMS.
+                  transmitted to our server to send an invite to the chosen contact by email and/or SMS.
                   The invite message contains the name of the consumer that intitiated
                   the call, the
                   name of the contact and the link needed to access the Jitsi room.
@@ -380,9 +380,9 @@
               <div class="col-lg-10">
                 <p style="margin-bottom: 0px;">
                   The consumer configuration is cached in the browser's local storage as in the first figure below. When
-                  the cosnumer enters the
+                  the cosnumer enters, the
                   application gets consumer at the <code>/api/otc/:otc</code> API endpoint by using the consumer's
-                  associated One-Time code (OTC). The response is transformed into JSON format and added the local cache
+                  associated One-Time Code (OTC). The response is transformed into JSON format and added to the local cache
                   with
                   <code>setItem()</code> function.
                 </p>
@@ -416,9 +416,9 @@
                 <div class="col-lg-10">
                   <h2 style=" padding-bottom: 5px; margin-bottom: 10px;">Recording Voice Commands</h2>
                   <p style="margin-bottom: 20px;">
-                    Since the 2 afore mentioned services require different audio file types to process, we needed to
+                    Since the 2 aforementioned services require different audio file types to process, we needed to
                     integrate 2 libraries
-                    that can recording audio from browser as MP3 (for Watson) and Wav (for Ask Bob).
+                    that can record audio from the browser as MP3 (for Watson) and Wav (for Ask Bob).
                   </p>
                   <p>
                     But using 2 libraries within the same component can increase code complexity dramatically. Thus, we
@@ -459,9 +459,9 @@
                   This component makes use of the <code>RecorderAdapter</code> class by calling its start,
                   stop
                   functions whenever and event is
-                  triggered. It also fetches the audio data to the selected APIs and handle the response data
+                  triggered. It also fetches the audio data to the selected APIs and handles the response data
                   accordingly. In addition, it
-                  can render different things based on the state that it is in. For example, when a in recording
+                  can render different things based on the state that it is in. For example, when in a recording
                   state,
                   we pass in a
                   function that will render the microphone icon in red action feedback.
@@ -517,11 +517,10 @@
                 </p>
                 <p>
                   On the other hand, if the Ask Bob option is selected, then the user device will directly communicate
-                  with Ask Bob
+                  with the Ask Bob
                   service by running the <code>askbobFetch</code> function (see above) without the need of our server as
                   a mediator. This design decision improves response
-                  time and as in the case of running Ask Bob locally as there is no need for a server connection in this
-                  case.
+                  time, as in the case of running Ask Bob locally there is no need for a server connection.
                 </p>
                 <p>
                   Very important to note is the difference between the Watson and Ask Bob response handlers. As Ask Bob
@@ -550,7 +549,7 @@
             <div class="row" style="margin-bottom: 30px !important; justify-content: center">
               <div class="col-lg-10">
                 <p>
-                  As you can see the response handler forAsk Bob has a case for reading specific Concierge response
+                  As you can see the response handler forAsk Bob has a case for reading specific Concierge responses
                   such as recipe
                   instructions which are separated by steps.
 
@@ -595,9 +594,9 @@
                   handler for emergency messages). The fetching functions are the same: audio file is sent to either Ask
                   Bob
                   or IBM Watson
-                  where speech is transformed into text. Now, the response handler does send the text response further
+                  where speech is transformed into text. Now, the response handler doesn't send the text response further
                   to be read out to
-                  the user but instead sends it to our server's <code>/api/otc/emergency</code> API endpoint where the
+                  the user, but instead sends it to our server's <code>/api/otc/emergency</code> API endpoint where the
                   text is sent in batches on email and SMS to every contact.
                 </p>
               </div>
@@ -645,7 +644,7 @@
                 <p>
                 <ul>
                   <li>
-                    First, initialize they’re data using JavaScript or 3rd party libraries.
+                    First, initialize their data using JavaScript or 3rd party libraries.
                   </li>
                   <li>
                     Then, add their HTML in the return statement of the Plugin component .
@@ -731,7 +730,7 @@
                   In the case of cloud enabled, the behavior of the <code>playTextToSpeechLocally</code> function
                   is the following: receives text as paramter, then fetches the
                   <code>/api/otc/watson/text-to-speech</code> endpoint on our server to synthesize the speech. The
-                  response will be an Mp3 blob that is turned into a blob and injected into an audio element in the root
+                  response will be an MP3 blob that is turned into a blob and injected into an audio element in the root
                   window.
                 </p>
               </div>
@@ -743,7 +742,7 @@
             <div class="row" style="margin-bottom: 30px !important; justify-content: center">
               <div class="col-lg-10">
                 <p>In case the user starts a new recording while voice response is still playing, we want the audio to
-                  stop and in order to not overlap with what the user is saying. To achieve this we attach the
+                  stop in order to not overlap with what the user is saying. To achieve this we attach the
                   <code>stopSpeech</code>
                   function as a hook to the <code>RecorderComponent</code>, that stops the
                   audio from playing when a new recording is initiated. It check if the audio is playing both in the
