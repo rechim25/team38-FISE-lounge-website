@@ -75,7 +75,7 @@
           </div>
 
           <!-- Dependencies & Tools -->
-          <h2 style="text-align: center; padding-bottom: 30px;">Dependencies & Tools</h2>
+          <h2 style="text-align: center; padding-bottom: 30px; margin-top:40px;">Dependencies & Tools</h2>
           <div class="container">
             <div class="row" style="margin-bottom: 30px !important">
               <div class="col-lg-5 align-items-center">
@@ -155,7 +155,7 @@
           </div>
 
           <!-- UI Design and Implementation -->
-          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">UI Design</h2>
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 60px;">UI Design</h2>
           <div class="container">
             <div class="row" style="margin-bottom: 30px !important; justify-content: center">
               <div class="col-lg-10">
@@ -207,17 +207,6 @@
                       src="images/impl/command-button-visibility-dark.png" alt="alt">
                   </div>
                 </div>
-                <!-- <p>
-                          To improve visibility, we have provided good contrast for buttons 
-                          using a dark glassy panel with white colored icons. This guarantees 
-                          button visibility on all custom backgrounds that can be added to the 
-                          application. 
-                          
-                          Moreover, to provide a sense of what the user can achieve 
-                          are we have added representative icons that suggest the action 
-                          associated with the button. 
-                        </p>
-                        -->
               </div>
               <div class="row" style="margin-bottom: 20px !important; justify-content: center;">
                 <div class="col-lg-10">
@@ -311,8 +300,58 @@
               </div>
             </div>
           </div>
+          <!-- Video-calling API  -->
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px;  margin-top: 60px;">Video Calling API
+          </h2>
+          <div class="container">
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <p>
+                  Using the Jitsi Meet API we have been able to integrate a secure and reliable video-calling option for
+                  our users.
+
+                  Jitsi is customizable. We have added multilingual support for the video-calling frame based on the
+                  detected language of
+                  the browser, simplified the command interface of Jitsi , background colors and more through the API.
+                </p>
+                <p>
+                  When a consumer initiates a call with a contact, a new Jitsi room will be created and associated to
+                  that consumer . At this
+                  time, a request is
+                  transmitted to our server to send an invite to the chosen contact by email and or SMS.
+                  The invite message contains the name of the consumer that intitiated
+                  the call, the
+                  name of the contact and the link needed to access the Jitsi room.
+                </p>
+
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-6" style=" justify-content: center">
+                <img class="img-fluid"
+                  style="width: 100%; min-width: 300px; max-width: 700px; margin: 0; padding-bottom: 20px;"
+                  src="images/impl/jitsi-iframe.png" alt="alt">
+              </div>
+              <div class="col-lg-4" style=" justify-content: center">
+                <p>
+                  In turn, the Jitsi API returns an iFrame that we render within our own custom component.
+                  The purpose of this component is to provide feedback to the user in
+                  terms of room
+                  initiate and loading. As you can see, the component triggers a focus mode on the main page
+                  application, suggesting that
+                  the user now interacts with room interface. Also, the component is reusable, allowing further
+                  development to integrate
+                  Jitsi in different ways within our app.
+                </p>
+                <p> The Jitsi UI is simple and modern. Allows sending additional invites for group calls as well as
+                  privacy-settings for securing the room session that can be eithered entered manually or specified as
+                  in a JSON format in the iFrame as we do.</p>
+              </div>
+            </div>
+          </div>
           <!-- Voice Commands -->
-          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">Voice Commands</h2>
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 60px;">Voice Commands
+          </h2>
           <div class="container">
             <!-- Overview -->
             <div class="row" style="margin-bottom: 30px !important; justify-content: center">
@@ -433,10 +472,6 @@
                   user's microphone with our <code>initUserMedia()</code> function and start the recording with the
                   <code>start()</code> function of the adapter (as seen below).
                 </p>
-                <!-- <p>
-                  The component is reusable as it allows developers to customize its behavior if needed in other parts
-                  of the code.
-                </p> -->
               </div>
               <div class="col-lg-10" style="margin-bottom: 20px !important; justify-content: center">
                 <img class="img-fluid" style="width: 80%; min-width: 350px; max-width: 500px;  margin: 0;"
@@ -535,7 +570,8 @@
             </div>
           </div>
           <!-- Emergency Message -->
-          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">Emergency Messages
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px;  margin-top: 60px;">Emergency
+            Messages
           </h2>
           <div class="container">
             <div class="row" style="margin-bottom: 30px !important; justify-content: center">
@@ -576,7 +612,7 @@
             </div>
           </div>
           <!-- Plugins -->
-          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px;  margin-top: 60px;">
             Plugins
           </h2>
           <div class="container">
@@ -622,7 +658,7 @@
             </div>
           </div>
           <!-- Login -->
-          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px;  margin-top: 60px;">
             Login Mechanism
           </h2>
           <div class="container">
@@ -663,7 +699,7 @@
             </div>
           </div>
           <!-- Other Privacy Features Highlights -->
-          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px;  margin-top: 60px;">
             Other Privacy Features Highlights
             <a id="local-speech-synthesis"></a>
           </h2>
