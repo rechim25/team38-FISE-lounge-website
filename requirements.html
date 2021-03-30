@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Requirements - Team 38 - IBM2 FISE</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="index.html">IBM2 FISE</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="uidesign.html">UI Design</a></li>
+            <li><a href="sysdesign.html">System Design</a></li>
+            <li><a href="requirements.html">Requirements</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="testing.html">Testing</a></li>
+            <li><a href="evaluation.html">Evaluation</a></li>
+            <li><a href="appendices.html">Appendices</a></li>
+            <li><a href="elements.html">Elements</a></li>
+            <li><a href="legal.html">Legal</a></li>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main" class="wrapper style1">
+        <div class="container">
+          <header class="major">
+            <h2>Requirements</h2>
+          </header>
+
+          <!-- Content -->
+          <section id="content">
+            <h3>Project Background</h3>
+            <p>
+            Covid-19 has highlighted society's need to help people in social isolation, particularly amongst our most vulnerable –
+            the elderly. Social Isolation over prolonged periods can have serious consequences in terms of mental and physical
+            health [1,2]. Our client, IBM, has several 'FISE' (Franklin Immersive Social Engagement) projects which all are
+            orientated around the development of open-source applications that help with social integration amongst the elderly and
+            those in social isolation. Our group is working on of these FISE projects - 'Social Isolation Assistance with Simplified
+            Calling'.
+            </p>
+
+            <h3>Project goal</h3>
+            <p>
+            Our project goal is the development (<b>proof of concept</b>) of an interactive, privacy-safe, video calling platform for the elderly and others
+            in social isolation. This platform's accessibility and design should be simple and tailored for the elderly both at
+            care-homes and residential homes. The platform should also be integrated with other FISE apps (Concierge and AskBob) to
+            set the building stones for a wider integrated FISE ecosystem.
+
+              <br> *Note that the goal of this project has changed over time per the request of our clients.
+            </p>
+
+            <h3>Requirements gathering</h3>
+            <p>
+              In order to understand the requirements of our clients further, we arranged a video-conferencing meeting with them.
+              During the meeting, our clients gave us a list of requirements and pointed out the priority of each requirement. In
+              subsequent meetings, we further clarified any ambiguities and made a MoSCoW list with all the requirements.
+            </p>
+            <p>Here is an example of questions that we asked during our meetings:</P>
+            <ul>
+              <li>What are the key platforms this will be used on?</li>
+              <li>What IBM Watson services should be provided?</li>
+              <li>Conservative or Modern design? Based on research or more traditional web design guidelines?</li>
+              <li>What user data should be stored?</li>
+            </ul>
+
+            <h3>User Interviews</h3>
+            <p>Following our client meetings, we set up interviews with our users. Below are some of our transcripts from our primary users - elderly.</p>
+            <p><b>Elderly user 1</b>
+              <br><b>Q:</b> What people would you like to stay connected with through a video calling app?
+              <br><b>A:</b> Primarily family and friends.
+              <br><b>Q:</b> Do you usually use phone or desktop apps?
+              <br><b>A:</b> No, I find them hard to operate with as they require a lot of dedication to learn.
+              <br><b>Q:</b> What troubles you most about using apps?
+              <br><b>A:</b> They are all different and can let you down sometimes.
+              <br><b>Q:</b> What do you think about the ability to execute voice commands?
+              <br><b>A:</b> Sounds great. If the computer can understand you well, might be easier than scrolling through a very large list of
+              elaborate commands.
+              <br><b>Q:</b> How about online board games with friends (i.e. chess)?
+              <br><b>A:</b> That would be very interesting.
+            ​</p>
+
+            <p><b>Elderly user 2</b>
+              <br><b>Q:</b> Would you agree to share your data with renowned institutions such as NHS?
+              <br><b>A:</b> Yes, I don't mind them knowing. All I want is to be aware when this is happening.
+              <br><b>Q:</b> Will you use this app for recreation?
+              <br><b>A:</b> Mostly. I want to be able to have about 10 people in the meeting without much effort.
+              <br><b>Q:</b> Do you have trouble reading small-sized texts?​
+              <br><b>A:</b> Yes. It starts to feel exhausting after a while.​
+              <br><b>Q:</b> Would you create an account to use our app?​
+              <br><b>A:</b> Probably. But I would be very frustrated if I must remember and type in the credentials every time. Preferably, I should
+              not need an account or my relatives would handle the account for me.
+              <br><b>Q:</b> Would you use a feature that allows you to check in every day and notify your family that you're not fine?​
+              <br><b>A:</b> Yes, I'm living alone due to the pandemic, so I'm sure that knowing that I'm okay would put my family at ease.​
+            ​</p>
+
+            <h3>Use case diagram</h3>  
+            <p>To make the use case of our project more clear, we decided to express it using a diagram.</p>
+            <div style="display: flex;">
+              <div style=" flex: 33.33%;
+              padding: 5px;"">
+                <img src="images/dashboard_use_case_diagram.png" style="width:100%">
+              </div>
+              <div style=" flex: 33.33%;padding: 5px;">
+                <img src="images/app_use_case_diagram.png" style="width:100%">
+              </div>
+            </div>
+
+            <h3>Use case list</h3>
+            <h4> Administrator </h4>
+            <p> The admin’s role lies in managing a user’s (elderly) account. An admin’s main use cases include:
+              <ul>
+                <li>Providing users with their OTC (one time code) which can be viewed on the dashboard.</li>
+                <li>Adding and editing user data, which involves: </li>
+                <ul>
+                  <li>Adding, deleting and changing the settings of backgrounds.</li>
+                  <li>Changing the names of users </li>
+                  <li>Changing privacy settings for users (by enabling or disabling cloud features).</li>
+                </ul>
+                <li>Adding and editing contact data, which involves:</li>
+                <ul>
+                  <li>Changing the names, emails, phone numbers and relation of contacts.</li>
+                  <li>Setting contact profile pictures.</li>
+                </ul>
+              </ul>
+            </p>
+
+          <h4> User </h4>
+          <p> The admin’s role lies in managing a user’s (elderly) account. An admin’s main use cases include:
+            <ul>
+              <li>Sending emergency messages if they are in distress.</li>
+              <li>Using voice commands to perform in-app tasks such as changing backgrounds or calling contacts, or to receive various
+                information such as weather forecasts, recipes for food, etc.</li>
+              <li>Using plugins to gain access to various features (which can be set by a developer), such as live news feeds or games.</li>
+              <li>Calling their contacts through Jitsu. </li>
+            </ul>
+          </p>
+
+
+            <h3>Personas</h3>
+            <a href="images/Persona2_website.png" class="image fit"><img src="images/Persona_website.png" alt="" /></a>
+            <p>Hugh Lawson (elderly person)​
+            Hugh is a retired lawyer who lives far away from his family and can't visit them or his friends due to the COVID-19
+            pandemic. He is also isn't very tech-savvy, so he wants to find an easy-to-use video calling app or site which would
+            allow him to stay in touch with his family and friends. Hugh's grandson recommended him to use FISE's video calling app
+            as it is privacy-safe and would not require him to log in with a user-name and password, but only a one-time code. He
+            found it easy to start a call because the layout is simple and similar to other video calling apps/websites. He also
+            found calling and inviting his friends and family into the call to be straightforward, either just pressing on their
+            image or sharing a link. Hugh suffers from occasional seizures, which is why he tried out the check-in feature for a few
+            days, which he found to be an incredibly useful and quick method to notify his family that he is doing fine. </p>
+            <a href="images/Persona2_website.png" class="image fit"><img src="images/Persona2_website.png" alt="" /></a>
+            <p>Josh is a student. His grandfather lives in a nearby care home, and Josh would usually visit him every two weeks.
+            However, due to the COVID-19 pandemic, the care home has enforced strict preventative measures and Josh can’t visit him
+            anymore. He is worried that he might become more distant to his grandfather, and that his grandfather might feel lonely
+            now that there’s no one who can visit him. His grandfather isn’t very tech-savvy, so he is looking for an app which he
+            could easily manage for him. </p>
+
+            <h3>MoSCoW</h3>
+            <h4>Functional</h4>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Requirements</th>
+                    <th>Priority</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      Videocall invites through email
+                    </td>
+                    <td>Must have</td>
+                  </tr>
+            
+                  <tr>
+                    <td>2</td>
+                    <td>Videocall Invites through SMS</td>
+                    <td>Must have</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                     Option to upload custom background images, both static and interactive 360 VR images.
+                    </td>
+                    <td>Must have</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Background images should have option be uploaded using URL (no need to have the image locally on device)</td>
+                    <td>Must have</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Voice clip feature for emergency check-ins. "I'm ok" "I don't feel well".</td>
+                    <td>Must have</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Capture a call log</td>
+                    <td>Must have</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Voice commands (i.e. call contact) through IBM Watson</td>
+                    <td>Should have</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Integration of other FISE apps (FISE AskBob)</td>
+                    <td>Should have</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>
+                      Show disclaimer about browser restrictions
+                    </td>
+                    <td>Should have</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>
+                      Loading screen with FISE logo and information
+                    </td>
+                    <td>Should have</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>
+                      Option to select between IBM Watson and Askbob (privacy choice) for voice commands in the the account
+                      management/dashboard page
+                    </td>
+                    <td>Should have</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>
+                      Elderly should have access to custom plugins/apps (and developers should be able to create new plugins/apps)
+                    </td>
+                    <td>Should have</td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>
+                      Customizable (for developer use) HTML page that displays plugins/apps
+                    </td>
+                    <td>Should have</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>
+                      Ability to upload and display contact profile pictures so that elderly easily can recognize contacts
+                    </td>
+                    <td>Should have</td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>
+                      Access to FISE Concierge voice commands
+                    </td>
+                    <td>Could have</td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td>
+                      Watch parties (streaming or livestream or similar)
+                    </td>
+                    <td>Could have</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr></tr>
+                </tfoot>
+              </table>
+            </div>
+
+            <h4>Non-Functional</h4>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Requirements</th>
+                    <th>Priority</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      No account management required by elderly (i.e. no need for username and password for them to login)
+                    </td>
+                    <td>Must have</td>
+                  </tr>
+            
+                  <tr>
+                    <td>2</td>
+                    <td>Demonstrate cross-platform functionality (i.e. tablet, phone, pc)</td>
+                    <td>Must have</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      App UI (accessibility) should be tailored for elderly
+                    </td>
+                    <td>Must have</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Deployable to server by tech-savvy</td>
+                    <td>Must have</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Simple local deployment for non-tech savvy</td>
+                    <td>Must have</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Video call frame (Jitsi) should be multilingual</td>
+                    <td>Must have</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Adapt to Progressive Web App (PWA) standards</td>
+                    <td>Should have</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>User-demo testing on multiple devices</td>
+                    <td>Should have</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>
+                      Option to use local speech synethesiser (privacy choice)
+                    </td>
+                    <td>Could have</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>
+                      Multilingual SMS invites
+                    </td>
+                    <td>Could have</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>
+                      Free open-source games added in plugins/apps menu
+                    </td>
+                    <td>Could have</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr></tr>
+                </tfoot>
+              </table>
+            </div>
+
+            <h3>References</h3>
+            <p>[1] W. Sepúlveda-Loyola et al., “Impact of social isolation due to COVID-19 on health in older people: Mental and
+            physical effects and recommendations,” J. Nutr. Health Aging, vol. 24, no. 9, pp. 938–947, 2020.
+            <br> [2] A. Hajek and H.-H. König, “Social isolation and loneliness of older adults in times of the COVID-19 pandemic: Can
+            use of online social media sites and video chats assist in mitigating social isolation and loneliness?,” Gerontology,
+            vol. 67, no. 1, pp. 121–124, 2021.
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a href="https://github.com/UCL-COMP0016-Team-38/FISE-Lounge" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--
+   Landed by HTML5 UP
+   html5up.net | @ajlkn
+   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+   -->
+<html>
+
+<head>
+  <title>Research - Team 38 - IBM2 FISE</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+</head>
+
+<body class="is-preload">
+  <div id="page-wrapper">
+    <!-- Header -->
+    <header id="header">
+      <h1 id="logo"><a href="index.html">IBM2 FISE</a></h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="uidesign.html">UI Design</a></li>
+          <li><a href="sysdesign.html">System Design</a></li>
+          <li><a href="requirements.html">Requirements</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
+          <li><a href="testing.html">Testing</a></li>
+          <li><a href="evaluation.html">Evaluation</a></li>
+          <li><a href="appendices.html">Appendices</a></li>
+          <li><a href="elements.html">Elements</a></li>
+          <li><a href="legal.html">Legal</a></li>
+      </nav>
+    </header>
+    <!-- Main -->
+    <div id="main" class="wrapper style1">
+      <div class="container">
+        <header class="major">
+          <h2>Overview</h2>
+          <p>
+            As our task is to create an interative video calling and privacy safe platform for 
+            elderly and those in social isolation. We have conducted research 
+            on existing similiar applications and what technologies
+            we believe are needed for our purposes. We have had discussions 
+            with the client to determine what similiar applications and 
+            technologies we should investigate.
+          </p>
+        </header>
+        <!-- Content -->
+        <section id="content">
+          <header>
+            <h2>Similar applications</h2>
+          </header>
+          <h3>Houseparty</h3>
+          <p>
+            Houseparty is a free video social networking app that allows you
+            to video chat with up to 8 friends in “rooms” and play games
+            together. Its popularity has exploded during the covid-19 crisis.
+          </p>
+          <span class="image fit">
+            <img src="images/housepartyapp.jpg" alt="" />
+            <figcaption>
+              Image: <a href="https://Houseparty.com">Houseparty</a>
+            </figcaption>
+          </span>
+          <dl>
+            <div class="row">
+              <div class="col-4 col-12-medium">
+                <dt style="color: #33cc33;">Good features</dt>
+                <ul class="alt">
+                  <li>
+                    A wide variety of in apps games such as Trivia, UNO, Quick
+                    Draw!, etc.
+                  </li>
+                  <li>Suggestive icons</li>
+                  <li>Easily add friends from contact list.</li>
+                </ul>
+              </div>
+              <div class="col-4 col-12-medium">
+                <dt style="color: #ffaa00;">Limiting features</dt>
+                <ul class="alt">
+                  <li>Change background feature.</li>
+                  <li>Maximum of 8 users per room.</li>
+                  <li>Connectivity not so great.</li>
+                </ul>
+              </div>
+              <div class="col-4 col-12-medium">
+                <dt style="color: #ff6666;">Bad features</dt>
+                <ul class="alt">
+                  <li>No information about privacy provided</li>
+                  <li>There is not desktop app (currently in Beta).</li>
+                  <li>Requires log-in.</li>
+                </ul>
+              </div>
+            </div>
+            <ul>
+              <b>Take-aways</b>
+              <li>Games can be a great feature, but that we should restrict the complexity of games - the games should
+                be intuitive with an easy interface.
+              </li>
+              <li>
+                Houseparty's icons are custom and very suggestive, but their uniqueness can be a bit confusing. We
+                should therefore aim to have more commonly used SVGs for vital functionalities that the elderly do not
+                get confused about.
+              </li>
+              <li>
+                The app is responsive and this is important for a good user experience.
+              </li>
+              <li>
+                It is easy to call a contact and friends, but it still not as easy as it could be.
+              </li>
+              <li>Main screens should include all the vital operations of usability.</li>
+              <li>
+                We need to ensure background swapping is easy, i.e. by allowing URLs to be used.
+              </li>
+            </ul>
+          </dl>
+
+          <hr />
+            <header>
+              <h3>Facebook Portal</h3>
+            </header>
+            <p>
+              Facebook Messenger Rooms is a videconferencing feature of facebook messenger. Its purpose is to make it
+              easy to spend quality time with friends, loved ones and people with similiar interests [2].
+            </p>
+            <span class="image fit">
+              <img src="images/messenger_rooms.jpg" alt="" />
+              <figcaption>
+                Image: <a href="https://about.fb.com/news/2020/04/introducing-messenger-rooms/">Facebook</a>
+              </figcaption>
+            </span>
+            <dl>
+              <div class="row">
+                <div class="col-4 col-12-medium">
+                  <dt style="color: #33cc33;">Good features</dt>
+                  <ul class="alt">
+                    <li>
+                      You can join a call without an account using a link
+                    </li>
+                    <li>It is easy to add contacts</li>
+                    <li>Available on most platforms (it is a react app)</li>
+                  </ul>
+                </div>
+                <div class="col-4 col-12-medium">
+                  <dt style="color: #ffaa00;">Limiting features</dt>
+                  <ul class="alt">
+                    <li>Contacts need to have a Facebook account</li>
+                    <li>Simple UI, but targeted towards a younger audience with some complex menus</li>
+                    <li>Integration with other Facebook apps such as WhatsApp and Instagram require login</li>
+                  </ul>
+                </div>
+                <div class="col-4 col-12-medium">
+                  <dt style="color: #ff6666;">Bad features</dt>
+                  <ul class="alt">
+                    <li>No information or options is given regarding privacy features and the use of data</li>
+                    <li>No voice commands available</li>
+                    <li>No additional features such as games</li>
+                  </ul>
+                </div>
+              </div>
+              <ul>
+                <b>Take-aways</b>
+                <li>Transparent design for buttons gives depth to the design. Also, make it easier to see the “clickability” of a button.
+                </li>
+                <li>
+                  Ensure that privacy choices (i.e. whether cloud or local features be used) are available.
+                </li>
+                <li>
+                  Emojis as SVGs is great and very intuitive for room topic and others, as they are commonly used and understood by a
+                  large group of people (even elderly understand emojis).
+                </li>
+                <li>
+                  It is easy to call a contact and friends, but it still not as easy as it could be.
+                </li>
+                <li>Make sure that it is easy to call contacts and that contacts do need an account.</li>
+              </ul>
+            </dl>
+
+<h2>Technology review</h2>
+<h3>React</h3>
+<p>
+  A key part of the project is creating a good UI, for which we
+  needed to choose a JavaScript framework or library. The two most
+  widely used libraries/frameworks in this field are React, which is
+  an open-source library, and Angular, which is a framework [3]. For
+  this project, we have decided to keep using React.
+</p>
+<p>
+  The main advantage of React is that it’s smaller than Angular and
+  easier to get used to if the programmer has prior knowledge of
+  JavaScript [3]. Using React will make achieving the requirements of
+  the project more realistic due to its ease of use, all while
+  providing the tools necessary to complete the project due to its
+  compatibility with third party modules [4]. The disadvantage of having
+  to import modules, however, is that our team has to make sure that
+  these stay consistent throughout the code. On the other hand,
+  React also has a virtual DOM (Document Object Model)
+  implementation, which limits the frequency of updates to the
+  actual DOM, making it faster and more suitable for a video calling
+  app [3].
+</p>
+<p>
+  Angular is a framework, so any necessary features will likely
+  already be within it, and not needing to import modules would make
+  using it more consistent. However, it is much larger, and
+  typically written in TypeScript, a language that builds on
+  JavaScript [5]. This means that it would be significantly more
+  difficult to learn and would take longer to get started with.
+</p>
+            <p>
+              React is owned by Facebook, while Angular is owned by Google, both
+              of which are known for shutting down projects for various reasons,
+              e.g. profitability. From a stability perspective, both are equally
+              likely to lose support from their company.
+              Overall, React is the more realistic option, mainly due to its
+              accessibility and use of plain JavaScript over TypeScript.
+            </p>
+            <hr />
+
+<h3>Next.js</h3>
+<p>
+  Next.js is a framework built on top of React that will empower us
+  to create an even more performant and reactive application while
+  reducing the complexity of the code. Some of the most important
+  features of Next.js include automatic bundling using webpack,
+  code-splitting, page-based routing, server-side rendering, API
+  routes and scalability [7,8].
+</p>
+
+<p><b> Performance </b></p>
+
+<p>
+  Performance is one of the most important factors for our choice.
+  React requires difficult techniques for optimization. Next.js
+  simplifies this process.
+</p>
+<p>
+  Automatic code-splitting is a Next.js feature that will
+  improve our loading times of pages by dynamically loading JavaScript
+  code that is packaged into bundles. With Next.js’s file system
+  based routing we can scale our application while affecting
+  the load times of our pages. When a specific route is requested by
+  the client, Next.js will load that specific JavaScript bundle that
+  corresponds to the requested route, thus not overloading the
+  client with unused code [8, 9]. These bundles are automatically created
+  by Next.js using webpack which includes optimization features by
+  determining which code is shared across certain components.
+  One other feature that improves the loading time of the
+  application is dynamic import. Certain libraries may be needed
+  only when a certain action is done by the user, therefore Next.js
+  supports dynamic import which can load JavaScript code when the
+  user triggers certain actions, such as the click of a button [9].
+</p>
+<p>
+  Pre-rendering is what makes a difference when using Next.js with
+  React. By default, Next.js pre-renders every page. This means that
+  Next.js generates HTML for each page in advance, instead of having
+  it all done by client-side JavaScript [7].
+  Each generated HTML is associated with minimal JavaScript code
+  necessary for that page. When a page is loaded by the browser, its
+  JavaScript code runs and makes the page fully interactive. Next.js
+  has two forms of pre-rendering: <b> Static Generation </b> and
+  <b> Server-side Rendering </b> [7]. The difference is in
+  <b> when </b> it generates the HTML for a page: Static Generation
+  generates HTML build time reusing it for each request, while the
+  other generates HTML on each request [7].
+</p>
+<p>
+  Another important aspect of this framework is the caching
+  mechanism for remote fetches. Vercel, the creator of Next.js
+  provides a very lightweight library, named SWR [10, 11], that improves the
+  fetching mechanism in React. SWR is a strategy to first return
+  the data from cache (stale), then send the fetch request
+  (revalidate), and finally come with the up-to-date data [10, 11]. In the
+  context of our application, SWR server a very important role in adapting the application to the Progressive Web Application (PWA)
+  standard that would allow it to run "offline" (without the use of
+  internet services). This enables us to create a PWA that can be
+  installed added to devices' home screens even if it is a web app.
+</p>
+<p><b> Deployment </b></p>
+<p>
+  Since our base code has already been designed to function well
+  with the Vercel deployment system (as recommended by Next.js on
+  their website), Next.js makes a great choice [12].
+  The process is very easy requiring only the repository of the
+  Next.js app and the configuration data to be copied to Vercel [12].
+  This will facilitate our production testing iterations by reducing
+  the time taken to redeploy and reconfigure our Next.js applciation
+  for production. Easy to deploy using Vercel, the creator of
+  Next.js. But gives the option of deploying on every server that has Node.js, thus allowing us to fulfil our requirement of
+  deploying on a remote server for users to be served the application seamlessly.[12]
+</p>
+<hr />
+<h3>Docker</h3>
+  <p>
+    Docker is a platform that enables your application to be deployed,
+    shipped and run on different systems and environments without
+    changing the source code. This is achieved by isolating the app
+    from the environment of the machine that is running on (host
+    machine) [13]. Those isolated environments are called
+    <b>containers</b> which can run quickly, securely and reliably
+    with all the needed dependencies. Docker is the industry standard
+    for container-based applications [14].
+  </p>
+  <p>
+    Containers can be built from Docker <b>images</b> which represent
+    immutable snapshots of software packages such as Ubuntu, Node.js
+    and many others [14]. Thus, a container can be constructed to run
+    multiple software packages from multiple images without needing to
+    install them on the host machine.
+  </p>
+  <p>
+    Another very important feature is the <b>Docker Compose API</b>.
+    Docker Compose allows multiple containers to communicate at
+    runtime, thus giving the possibility of running parts of the
+    application from multiple environments. Docker inserts the
+    containers in their own local network that runs on the Docker
+    Host, separate from the network of the host machine. This enables
+    an application to have a server container that communicates with a
+    client container in a secure, isolated environment.
+  </p>
+  <p><b> Deployment </b></p>
+  <p>
+    In the context of our project, Docker is very useful in achieving
+    <b>cross-platform functionality</b>. More exactly, Docker would
+    allow clients to deploy the application consisting of the
+    client-side, server-side and database locally on the consumer
+    device without detriment to the features. Moreover, Docker
+    containers are very lightweight as they share the machine’s OS
+    system kernel and therefore do not require an OS per application.
+    This allows our application to
+    <b>run on lower-end hardware</b> and devices without consuming
+    resources unnecessarily.
+  </p>
+  <p><b> Privacy & Security </b></p>
+  <p>
+    Since Docker enables our application to run entirely locally, the
+    communication between client-server and server-database in the
+    <b>cloud is removed</b>. In addition, Docker containers are very
+    secure as they operate within their own
+    <b>isolated environment and network</b>. Most important security
+    features include: containers have their own namespace in the
+    kernel which means docker containers cannot see and interact with
+    host machine processes, limted attack surface of the Docker Engine
+    and restricted root access of the container processes on host
+    machine [13,14].
+  </p>
+<hr />
+              <h3>Jitsi</h3>
+              <p>
+                The primary use-case of our project is video calling, and as we’ve
+                all realized during the covid-19 pandemic there are many platforms
+                through which one can video-call someone. Many of these platforms
+                - including Wire, Google Meets, Zoom, WebEx, and Facebook Portal -
+                also allow you to embed their features into your own app to deploy
+                and build video calling solutions. However, despite they
+                opportunity to utilize these well-known platforms we have decided
+                to use Jitsi Meets (an open-source (Apache) WebRTC JavaScript
+                application) as the backbone for our video calling feature
+                [15].
+              </p>
+              
+              <p><b> Advantages of Jitsi </b></p>
+              
+              <p>
+                There are numerous benefits in using Jitsi Meets contra others.
+                First and foremost, it is free, open source and can run directly
+                in the browser without the need to install anything else.
+                [15] Furthermore, unlike most
+                competitors there is no need to register an account. One can
+                simply generate a meeting URL and access it directly, something
+                that is important for our client. More importantly, Jitsi has
+                support for End-to-End encryption and uses ephemeral video calling
+                standards to that meeting rooms only exist whilst the calls take
+                place and that there is no saved personal data collection.
+                Something that is not the case with most competitors
+                [16].
+              </p>
+<hr />
+    <h3>MongoDB - database</h3>
+    <p>
+We have decided to use MongoDB to store and manage individual user profiles. MongoDB is an open-source document-oriented
+NoSQL database. Unlike traditional SQL alternatives such MySQL, is does not use a relational structure with tables and
+rows [17]. We find it useful that MongoDB is object based with JSON-like documents
+which we believe makes it simpler for us to represent the various hierarchical relationships.
+
+Schemas are optional, so different formatted data can be inserted. This is helpful if plugins are created for the app
+that need to store data of different types.
+
+On the other hand, we don’t have to perform any complex queries, and have no need to analyze data, something that one
+might argue MySQL is better at. The simplicity of using JSON format ultimately makes MongoDB our choice.
+    </p>
+<hr />
+    <h3>Azure DevOps</h3>
+    <P>
+Azure DevOps is one of many available DevOps tools for developers. It helps with the automation of the processes to
+deploy a software system. Including Build -> Test > Release systems. We have decided to use Azure DevOps because it
+helps shorten our overall development cycle and provides additional functionality such as Azure repos (for source of
+control of our code) and numerous planning and tracking tools to detect code defects [18]. Whilst there are numerous
+other similar tools, such as Jira, Azure offers three key advantages.    
+</p>
+                <ol>
+                  <li>We have Microsoft accounts through university and Azure Devops can therefore easily be used using our school accounts.</li>
+                  <li>It is fully integrated with Git.</li>
+                  <li>Compared to JIRA its issue tracker is not isolated from the code base in Github.</li>
+                </ol>
+
+    <h2>Summary</h2>
+    <p>
+      To summarize, our technology choices enable us to build an application that has good performance but also could be
+      deployed in an isolated environment. We aim to speed up our development cycle by using azure to help us with automated
+      deployment sprint and track our commits in our sprints. We've also researched similar applications and found that many
+      of them have limited privacy features not necessarily a UI designed for the elderly and other less tech-savvy in social
+      isolation.
+    </p>
+
+            <h3>References</h3>
+            <p>[1] “FAQ,” Houseparty.com. [Online]. Available: https://houseparty.com/faq/. [Accessed: 01-Mar-2021].
+            <br/> [2] “Messenger Rooms,” Messenger.com. [Online]. Available: https://www.messenger.com/rooms. [Accessed: 02-Mar-2021].
+            <br/> [3] K. Rungta, “React vs angular: 10 most important differences you must know!,” Guru99.com, 01-Jan-2020. [Online].
+            Available: https://www.guru99.com/react-vs-angular-key-difference.html. [Accessed: 11-Dec-2020].
+            <br/> [4] “React,” Reactjs.org. [Online]. Available: https://reactjs.org/. [Accessed: 01-Mar-2021].
+            <br/> [5] “React vs. Angular: The complete comparison,” Rubygarage.org. [Online]. Available:
+            https://rubygarage.org/blog/react-vs-angularjs. [Accessed: 01-Mar-2021].
+            <br/> [6] M. Asay, “How Next.js aims to simplify front-end development,” TechRepublic, 21-Apr-2020. [Online]. Available:
+            https://www.techrepublic.com/article/how-next-js-aims-to-simplify-front-end-development/. [Accessed: 11-Dec-2020].
+            <br/> [7] “Differences between static generated sites and server-side rendered apps,” Smashingmagazine.com, 02-Jul-2020.
+            [Online]. Available:
+            https://www.smashingmagazine.com/2020/07/differences-static-generated-sites-server-side-rendered-apps/. [Accessed: 11-Dec-2020].
+            <br> [8] “Basic Features: Pages,” Nextjs.org. [Online]. Available: https://nextjs.org/docs/basic-features/pages. [Accessed: 11-Dec-2020].
+            <br> [9] “Next.js; what is it and why do we use it?,” Clock.co.uk. [Online]. Available:
+            https://www.clock.co.uk/insight/next-js-what-is-it-and-why-do-we-use-it. [Accessed: 11-Dec-2020].
+            <br> [10] “Usage with Next.js,” Vercel.app. [Online]. Available: https://swr.vercel.app/docs/with-nextjs. [Accessed:
+            20-Mar-2021].
+            <br> [11] R. Cao, “Data fetching with next.Js,” Dev.to, 04-May-2020. [Online]. Available:
+            https://dev.to/ryanccn/data-fetching-with-next-js-38b6. [Accessed: 11-Dec-2020].
+            <br> [12] “Deployment,” Nextjs.org. [Online]. Available: https://nextjs.org/docs/deployment. [Accessed: 11-Dec-2020].
+            <br> [13] “Docker overview,” Docker.com, 25-Mar-2021. [Online]. Available: https://docs.docker.com/get-started/overview/.
+            [Accessed: 18-Feb-2021].
+            <br> [14] “What is a Container?,” Docker.com. [Online]. Available: https://www.docker.com/resources/what-container.
+            [Accessed: 20-Mar-2021].
+            <br> [15] “About Jitsi Meet,” Jitsi.org, 06-Dec-2016. [Online]. Available: https://jitsi.org/jitsi-meet/. [Accessed:
+            11-Dec-2021].
+            <br> [16] C. Gartenberg, “Google Meet, Microsoft Teams, and WebEx are collecting more customer data than they appear to be,”
+            The Verge, 01-May-2020. [Online]. Available:
+            https://www.theverge.com/2020/5/1/21244058/google-meet-microsoft-teams-webex-personal-data-collection-privacy-policy-concerns.
+            [Accessed: 20-Mar-2021].
+            <br> [17] “What Is MongoDB?,” Mongodb.com. [Online]. Available: https://www.mongodb.com/what-is-mongodb. [Accessed:
+            20-Mar-2021].
+            <br> [18] “Azure DevOps,” Microsoft.com. [Online]. Available: https://azure.microsoft.com/en-us/services/devops/. [Accessed:
+            20-Mar-2021].
+            </p>
+        </section>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li>
+          <a href="https://github.com/UCL-COMP0016-Team-38/FISE-Lounge" class="icon brands alt fa-github"
+            ><span class="label">GitHub</span></a
+          >
+        </li>
+      </ul>
+      <ul class="copyright">
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </footer>
+  </div>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

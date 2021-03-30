@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+  <title>No Sidebar - Landed by HTML5 UP</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+  <div id="page-wrapper">
+    <!-- Header -->
+    <header id="header">
+      <h1 id="logo"><a href="index.html">IBM2 FISE</a></h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="uidesign.html">UI Design</a></li>
+          <li><a href="sysdesign.html">System Design</a></li>
+          <li><a href="requirements.html">Requirements</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
+          <li><a href="testing.html">Testing</a></li>
+          <li><a href="evaluation.html">Evaluation</a></li>
+          <li><a href="appendices.html">Appendices</a></li>
+          <li><a href="elements.html">Elements</a></li>
+          <li><a href="legal.html">Legal</a></li>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <div id="main" class="wrapper style1">
+      <div class="container">
+        <header class="major">
+          <h2 style="font-size: 60px;">Implementation</h2>
+        </header>
+
+        <!-- Content -->
+        <section id="content">
+          </br>
+
+          <!-- Main Technologies -->
+          <h2 style="text-align: center; padding-bottom: 30px;">Main Technologies</h2>
+          <div class="container">
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-8">
+                <p>As previously mentioned in our Research section,
+                  our main technologies are <strong>React</strong>
+                  for the consumer application and
+                  <strong>Next.js</strong> & <strong>Node.js</strong>
+                  for our server API and administrator dashboard,
+                  making <strong>Javascript</strong> our primary project language.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; margin-bottom: 90px !important">
+            <div style=" flex: 33.33%;padding: 5px; align-items: center;">
+              <img src="images/impl/react-logo.png" width="250px">
+            </div>
+            <div style="flex: 33.33%; padding: 5px; align-items: center;">
+              <img src="images/impl/nodejs-logo.png" style="margin-left :auto; margin-right: auto;" width="400px">
+            </div>
+            <div style=" flex: 33.33%;padding: 5px;align-items: center;">
+              <img src="images/impl/next.js.svg" style="margin-left :auto; margin-right: auto;" width="250px">
+            </div>
+          </div>
+
+          <!-- Dependencies & Tools -->
+          <h2 style="text-align: center; padding-bottom: 30px;">Dependencies & Tools</h2>
+          <div class="container">
+            <div class="row" style="margin-bottom: 30px !important">
+              <div class="col-lg-5 align-items-center">
+                <img class="img-fluid" style="max-width: 100%; max-height: 80px;" src="images/impl/chakraui-logo.png"
+                  alt="chakra-ui-logo">
+              </div>
+              <div class="col-lg-7">
+                <div padding="5px">
+                  <h4>Chakra UI</h4>
+                  <p>
+                    React library with built-in, stylized,
+                    responsive UI components. It is an actively
+                    maintained and popular library for React apps.
+                    Using Chakra UI has significantly improved our
+                    UI development speed and improved the quality
+                    of our Reacts components.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important">
+              <div class="col-lg-5 align-items-center">
+                <img class="img-fluid" style="max-height: 100%; max-height: 100px;" src="images/impl/aframe-logo.png"
+                  alt="aframe-logo">
+              </div>
+              <div class="col-lg-7">
+                <div padding="5px">
+                  <h4>A-Frame</h4>
+                  <p>
+                    A library for creating interactive experiences
+                    within web applications through background animations.
+                    Allows us to generate the interactive VR background.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important">
+              <div class="col-lg-5">
+                <img class="img-fluid" style="max-height: 100%; max-height: 100px;"
+                  src="images/impl/jitsi-logo-box2.png" alt="jitsi-logo">
+              </div>
+              <div class="col-lg-7">
+                <div padding="5px">
+                  <h4>Jitsi</h4>
+                  <p>
+                    We needed an open-source, reliable and secure
+                    video-calling library that could be easily
+                    integrated into project. The answer was Jitsi
+                    Meet that allows our application to embed Jitsi
+                    video-call iFrames and provide our users with a
+                    simple way of contacting their friends and families.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important">
+              <div class="col-lg-5">
+                <img class="img-fluid" style="max-height: 100%; max-height: 100px;" src="images/impl/prettier-logo.png"
+                  alt="jitsi-logo">
+              </div>
+              <div class="col-lg-7">
+                <div padding="5px">
+                  <h4>Prettier</h4>
+                  <p>
+                    To maintain coding standards among group
+                    members we agreed to default to a code formatter.
+                    We chose the Prettier code formatter as it is one
+                    of the most opinionated Javascript formatter that
+                    allows custom syntax rules. TO be consistent in with
+                    our code base, we made use of the Prettier VScode plugin
+                    that allows us to specify workspace/project scoped
+                    formatter rules.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UI Design and Implementation -->
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">UI Design</h2>
+          <div class="container">
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <h2 style=" padding-bottom: 5px; margin-bottom: 10px;">UI Design Principles</h2>
+                <p style="margin-bottom: 0px;">Main objective of our UI design is to be suitable for elderly
+                  or people with less-technical expertise. For this reason,
+                  we have extensively researched UI alternatives and came up
+                  with a design that is based on gerontological principles.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px !important; justify-content: center;">
+              <div class="col-lg-4">
+                <p>First and foremost, we have created very <strong>accessible</strong>
+                  and <strong>suggestive</strong> command buttons that allow consumers
+                  to interact with our key functionalities directly.
+                </p>
+                <p>
+                  The main idea behind
+                  putting the button in the corners is to eliminate visual clutters.
+                  On the sides the buttons are most visible.
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <img class="img-fluid" style="width: 100%; max-width: 730px;"
+                  src="images/impl/main-ui-tablet-rounded.png" alt="main-ui">
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center;">
+              <div class="col-lg-4">
+                <p>
+                  To improve visibility, we have provided good contrast for buttons
+                  using a dark glassy panel with white colored icons. This will
+                  guarantee button visibility on all backgrounds.
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img class="img-fluid" style="max-width: 100px; margin: 0;"
+                      src="images/impl/command-button-visibility-white.png" alt="alt">
+                  </div>
+                  <div class="col-lg-4">
+                    <img class="img-fluid" style="max-width: 100px; margin: 0;"
+                      src="images/impl/command-button-visibility-blue.png" alt="alt">
+                  </div>
+                  <div class="col-lg-4">
+                    <img class="img-fluid" style="max-width: 100px; margin: 0;"
+                      src="images/impl/command-button-visibility-dark.png" alt="alt">
+                  </div>
+                </div>
+                <!-- <p>
+                          To improve visibility, we have provided good contrast for buttons 
+                          using a dark glassy panel with white colored icons. This guarantees 
+                          button visibility on all custom backgrounds that can be added to the 
+                          application. 
+                          
+                          Moreover, to provide a sense of what the user can achieve 
+                          are we have added representative icons that suggest the action 
+                          associated with the button. 
+                        </p>
+                        -->
+              </div>
+              <div class="row" style="margin-bottom: 20px !important; justify-content: center;">
+                <div class="col-lg-10">
+                  <p style="padding: 0;">
+                    As general principles taken away from research papers, we abided by a
+                    no text policy, meaning we avoided it as much as possible on our main page.
+                    The reason behind this decision is that text poses questions to visibility
+                    and can often clutter the design. Also, dark blue and green have been proved
+                    to be detrimental to usability for elderly users and, thus, it is something
+                    we avoided as well on our main page.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px !important; justify-content: center">
+              <div class="col-lg-10">
+                <h2 style=" padding-bottom: 5px; margin-bottom: 10px;">UI Implementation Principles</h2>
+                <p style="margin-bottom: 0px;">
+                  UI has been implementation has been carried on with the intent
+                  of allowing further development and improvement in the future and
+                  thus have worked with the principles of code reusability. Reusability
+                  guarantees overall design consistency.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px !important; justify-content: center">
+              <div class="col-lg-5 justify-content: center">
+                <p>
+                  To illustrate this principle, let's look at how our command buttons in the main
+                  page are implemented. The <code>CommandButton</code> component is used to wrap all
+                  command buttons and provide consistency in design.</p>
+                <p>
+                  The component takes multiple parameters make it modular and reusable such
+                  as placement coordinates with respect to the main page (<code>left</code>, <code>bottom</code>, etc.)
+                  and box roundness properties. A custom function can be provided that is triggered
+                  when clicked. Very importantly is that we allow other components to be wrapped by
+                  it using the <code>children</code> attribute.
+                </p>
+              </div>
+              <div class="col-lg-5">
+                <img class=img-fluid"" style="max-width: 368px; margin: 0;"
+                  src="images/impl/command-button-component.png" alt="alt">
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px !important; justify-content: center">
+              <div class="col-lg-5 justify-content: center">
+                <img class="img-fluid" style="max-width: 368px; margin: 0; padding-bottom: 20px;"
+                  src="images/impl/command-button-usage.png" alt="alt">
+              </div>
+              <div class="col-lg-5">
+                <p>
+                  For instance, the "change background" button from our main page makes use of this component.
+                  by specifying the <code>top=0</code> and <code>left=0</code>, meaning top-left corner.
+                  and setting the <code>bottomRight</code> corner to be rounded. It also, provides a custom
+                  function <code>handleChangeScene</code> that will change the currently selected background
+                  when the button is clicked.
+                </p>
+                <p>
+                  In this usage case, we can see that an icon component is passed to the <code>CommandButton</code>.
+                  Thus, the icon will be rendered inside the button.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Voice Commands -->
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">Voice Commands</h2>
+          <div class="container">
+            <!-- Overview -->
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <h2 style=" padding-bottom: 5px; margin-bottom: 10px;">Overview</h2>
+                <p style="margin-bottom: 0px;">
+                  A key feature of our application is to include 2 services for handling voice commands that can be
+                  chosen by the
+                  administrator from our dashboard. Below is how the dashboard option looks like for the administrator.
+                  When <code>Cloud Features</code> are enabled, <strong>IBM Watson</strong> services will be used.
+                  Otherwise, <strong>FISE Ask Bob</strong> will provide the virtual assistant service when the
+                  checkbox is disabled.
+                  When the administrator changes the cloud option of a consumer, a
+                  request is sent to
+                  our server to change the configuration of the respective consumer in the database.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px !important; justify-content: center">
+              <img class="img-fluid" style="width: 80%; min-width: 300px;  margin: 0;"
+                src="images/impl/dashboard-enable-cloud-on.png" alt="alt">
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <p style="margin-bottom: 0px;">
+                  The consumer configuration is cached in the browser's local storage as in the first figure below. When
+                  the cosnumer enters the
+                  application gets consumer at the <code>/api/otc/:otc</code> API endpoint by using the consumer's
+                  associated One-Time code (OTC). The response is transformed into JSON format and added the local cache
+                  with
+                  <code>setItem()</code> function.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px !important; justify-content: center;">
+              <div class="col-lg-5" style="justify-content: center">
+                <img class="img-fluid" style="width: 80%; min-width: 350px;  max-width: 650px; margin: 0;"
+                  src="images/impl/fetch-cache-consumer-data.png" alt="alt">
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px !important; justify-content: center;">
+              <div class="col-lg-10">
+                <p style="margin-bottom: 0px;">
+                  Then, after the consumer configuration is fetched, we store it into a global variable that is availabe
+                  for use everywhere in the main component. In case no configuration is found, we redirect the consumer
+                  to
+                  the <code>Onboarding</code> page to login with the OTC.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px !important; justify-content: center;">
+              <div class="col-lg-5">
+                <img class="img-fluid" style="width: 80%; min-width: 350px; max-width: 650px;  margin: 0;"
+                  src="images/impl/get-cached-consumer-data.png" alt="alt">
+              </div>
+            </div>
+            <!-- Recording Voice Commands -->
+            <div class="row" style="margin-bottom: 30px; margin-top: 30px; justify-content: center">
+              <div class="col-lg-10">
+                <div class="col-lg-10">
+                  <h2 style=" padding-bottom: 5px; margin-bottom: 10px;">Recording Voice Commands</h2>
+                  <p style="margin-bottom: 20px;">
+                    Since the 2 afore mentioned services require different audio file types to process, we needed to
+                    integrate 2 libraries
+                    that can recording audio from browser as MP3 (for Watson) and Wav (for Ask Bob).
+                  </p>
+                  <p>
+                    But using 2 libraries within the same component can increase code complexity dramatically. Thus, we
+                    have implemented a
+                    <code>RecorderAdapter</code> class that abstracts away the underlying differences of the 2 libraries
+                    using the
+                    Adapter design
+                    pattern. The class provides the necessary methods for recording audio such as <code>start()</code>,
+                    <code>stop()</code> and <code>clean()</code>
+                    the recording using
+                    asynchronous functions to provide flexibility when using the class in different ways. When a
+                    <code>RecorderAdapter</code> object is
+                    initialized at runtime it expects a <code>isCloudEnabled</code> boolean parameter which represents
+                    the
+                    user option
+                    for IBM Watson (if
+                    true) or Ask Bob (is false). This way the object will use the right recording library
+                    (<code>MicRecorder</code> for MP3 or <code>Recorder</code> for Wav as below).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-5">
+                <img class="img-fluid" style="width: 80%; min-width: 350px; max-width: 650px;  margin: 0 0 30px 0;"
+                  src="images/impl/recorderadapter-constructor.png" alt="alt">
+              </div>
+              <div class="col-lg-5">
+                <img class="img-fluid" style="width: 80%; min-width: 350px; max-width: 650px;  margin: 0;"
+                  src="images/impl/recorderadapter-start.png" alt="alt">
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <p>
+                  <code>RecorderComponent</code> is a reusable component that allows integration of recording anywhere
+                  within the application.
+                  This component makes use of the <code>RecorderAdapter</code> class by calling its start,
+                  stop
+                  functions whenever and event is
+                  triggered. It also fetches the audio data to the selected APIs and handle the response data
+                  accordingly. In addition, it
+                  can render different things based on the state that it is in. For example, when a in recording
+                  state,
+                  we pass in a
+                  function that will render the microphone icon in red action feedback.
+                </p>
+                <p>
+                  In the case of the Ask Bob service, <code>RecorderComponent</code> creates a new
+                  <code>RecorderAdapter</code> object with <code>isCloudEnabled</code> parameter set to true. When a
+                  user clicks on the component, the <code>handleMicrophoneClick</code> function in triggered. This will
+                  check if the component is already in a recording state and if not, then it will get access to the
+                  user's microphone with our <code>initUserMedia()</code> function and start the recording with the
+                  <code>start()</code> function of the adapter (as seen below).
+                </p>
+                <!-- <p>
+                  The component is reusable as it allows developers to customize its behavior if needed in other parts
+                  of the code.
+                </p> -->
+              </div>
+              <div class="col-lg-10" style="margin-bottom: 20px !important; justify-content: center">
+                <img class="img-fluid" style="width: 80%; min-width: 350px; max-width: 500px;  margin: 0;"
+                  src="images/impl/handle-mic-click-record-adapter.png" alt="alt">
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center;">
+              <div class="col-lg-10">
+                <h2 style=" padding-bottom: 5px; margin-bottom: 10px; margin-top: 30px">Using the API for Voice
+                  Commands</h2>
+                <p style="margin-bottom: 20px;">
+                  Once the previously mentioned recording process is finalized comes the fetching phase of the voice
+                  command. The <code>RecorderComponent</code> supports
+                  integrating 2 different API
+                  services within it. As you can see below, it expects 2 pairs of functions made of an API fetch and a
+                  response handler that
+                  uses the data retrieved by the API in a custom way.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important;justify-content: center">
+              <div class="col-lg-5">
+                <img class="img-fluid" style="width: 80%; min-width: 250px; max-width: 320px;   margin: 0 0 30px 0;"
+                  src="images/impl/recorder-component-constructor.png" alt="alt">
+              </div>
+              <div class="col-lg-5">
+                <img class="img-fluid" style="width: 80%; min-width: 300px; max-width: 420px;  margin: 0;"
+                  src="images/impl/recorder-component-fetch-phase.png" alt="alt">
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important;justify-content: center">
+              <div class="col-lg-10">
+                <p>
+                  If the user option is set use IBM Watson <code>isCloudEnabled === "true</code>, the
+                  <code>RecorderComponent</code> will use the
+                  <code>watsonFetch</code> function to send the audio file (<code>res</code>)
+                  to our server which will then be redirected to IBM Watson for interpretation. Afterwards,
+                  <code>watsonResponseHandler</code> will use the response data to check for
+                  discovered user intents (i.e. "Call John", "change background") and the actions needed to
+                  carry out.
+                </p>
+                <p>
+                  On the other hand, if the Ask Bob option is selected, then the user device will directly communicate
+                  with Ask Bob
+                  service by running the <code>askbobFetch</code> function (see above) without the need of our server as
+                  a mediator. This design decision improves response
+                  time and as in the case of running Ask Bob locally as there is no need for a server connection in this
+                  case.
+                </p>
+                <p>
+                  Very important to note is the difference between the Watson and Ask Bob response handlers. As Ask Bob
+                  provides access to
+                  the whole FISE ecosystem of applications and API, the askbob response handler function needs to take
+                  care of more
+                  types of responses.
+                  For example, when Ask Bob detects an intent for reading recipes in the voice query of a user, it will
+                  request the FISE
+                  Concierge app to provide a recipe from their API and this response needs to be handled correctly on
+                  our side as well (see below how we handle Concierge's custom response and how IBM Watson response is
+                  handled).
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important;justify-content: center">
+              <div class="col-lg-5">
+                <img class="img-fluid" style="width: 100%; min-width: 350px; max-width: 650px; margin: 0 0 30px 0;"
+                  src="images/impl/askbob-concierge-response-handler.png" alt="alt">
+              </div>
+              <div class="col-lg-5">
+                <img class="img-fluid" style="width: 80%; min-width: 100px; max-width: 450px;   margin: 0 0 30px 0;"
+                  src="images/impl/handle-watson-response-case-switch.png" alt="alt">
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <p>
+                  As you can see the response handler forAsk Bob has a case for reading specific Concierge response
+                  such as recipe
+                  instructions which are separated by steps.
+
+                  The <code>customResponse</code> function is given to the <code>RecorderComponent</code> to be ran when
+                  any of the 2
+                  services
+                  return a response. In
+                  our case, the <code>customResponse</code> is the function that plays Ask Bob’s or IBM Watson’s
+                  response out loud
+                  for the user to hear
+                  (to understand how speech synthesis is done, click <a href="#local-speech-synthesis">here</a>).
+                </p>
+                <p>
+                  In conclusion, we allow the functionality of a virtual assistant to be reused in our application with
+                  the option of
+                  adding other pairs of services and hook functions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Emergency Message -->
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">Emergency Messages
+          </h2>
+          <div class="container">
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <p>
+                  Previously, we mentioned that the <code>RecorderComponent</code> is reusable. Here, we provide an
+                  example of how
+                  the design of the
+                  component has benefited the development process.
+                </p>
+                <p>
+                  Emergency messages reuse the <code>RecorderComponent</code> for capturing short emergency audio
+                  recordings and then
+                  transcribe the
+                  audio into text to be sent as an alert to every contact of the consumer. It uses the
+                  <code>RecorderComponent</code>
+                  in almost the
+                  same way as voice recordings do, but with different response handlers (see below the Ask Bob response
+                  handler for emergency messages). The fetching functions are the same: audio file is sent to either Ask
+                  Bob
+                  or IBM Watson
+                  where speech is transformed into text. Now, the response handler does send the text response further
+                  to be read out to
+                  the user but instead sends it to our server's <code>/api/otc/emergency</code> API endpoint where the
+                  text is sent in batches on email and SMS to every contact.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-5">
+                <img class="img-fluid" style="width: 100%; min-width: 250px; max-width: 520px; margin: 0 0 30px 0;"
+                  src="images/impl/voice-clip-askbob-response-handler.png" alt="alt">
+              </div>
+              <div class="col-lg-5">
+                <img class="img-fluid" style="width: 90%; min-width: 100px; max-width: 450px;   margin: 0 0 30px 0;"
+                  src="images/impl/voice-clip-send-emergency-msg.png" alt="alt">
+              </div>
+            </div>
+          </div>
+          <!-- Plugins -->
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">
+            Plugins
+          </h2>
+          <div class="container">
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <p>
+                  Plugins are rendered within a custom iFrame in the PluginComponent. The main objective is to allow
+                  other developers to
+                  extend the plugins component to their users’ needs and add any service they desire. For example, we
+                  have added games
+                  such as chess.
+                  Also, we integrated the BBC live news feed with the RSS protocol using vanilla
+                  JavaScript and no 3rd party libraries.
+                </p>
+                <p></p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <img class="img-fluid" style="width: 100%; min-width: 400px; max-width: 1000px;  margin: 0 0 30px 0;"
+                  src="images/impl/fise-plugin-compilation.png" alt="alt">
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <p>
+                  Developers can extend the frame in 3 steps:
+                <p>
+                <ul>
+                  <li>
+                    First, initialize they’re data using JavaScript or 3rd party libraries.
+                  </li>
+                  <li>
+                    Then, add their HTML in the return statement of the Plugin component .
+                  </li>
+                  <li>
+                    If needed they can then add CSS code in the <code>/styles/plugins.css</code> file to style the
+                    Plugin component
+                    however they want.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Login -->
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">
+            Login Mechanism
+          </h2>
+          <div class="container">
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <h2 style=" padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">
+                  Administrators
+                </h2>
+                <p>
+                  We use <code>Passport.js</code> a lightweight library for managing authentication. It is important for
+                  persisting
+                  login sessions on
+                  the server–side using the username-password strategy. For maintaining the session on the client-side
+                  we send an
+                  encrypted session token using the <code>hapi/iron</code> library. This token is sent to the
+                  server-side, which can
+                  check the validity
+                  of the token and allow access to the client-side without prompting the user for the credentials again.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <h2 style=" padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">
+                  Consumers (elderly)
+                </h2>
+                <p>
+                  Once we entered the application, the elderly consumer needs to enter the One-Time Code (OTC) that the
+                  administrator gave to
+                  enter the app. Once the OTC is entered, our app will send a query to the server to grab the consumer
+                  data at <code>/api/otc/[otc]</code>. Once this data is returned from the database it will
+                  be stored in the
+                  browser cache, not needing to be used again for improving accessibility. The One Time Code is designed
+                  to be memorable
+                  and easy to write in case it may need to be re-entered.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Other Privacy Features Highlights -->
+          <h2 style="text-align: center; padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">
+            Other Privacy Features Highlights
+            <a id="local-speech-synthesis"></a>
+          </h2>
+          <div class="container">
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <h2 style=" padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">
+                  Local Speech Synthesis
+                </h2>
+                <p>
+                  To provide additional privacy-safety features we allow users to benefit from the WebAPI Speech
+                  Synthesizer available in
+                  most browsers. This is an alternative to IBM Watson Speech-to-Text and can be switched on from the
+                  dashboard.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <img class="img-fluid" style="width: 100%; min-width: 400px; max-width: 1000px;  margin: 0 0 30px 0;"
+                  src="images/impl/enable-text-to-speech-dashboard.png" alt="alt">
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-5" style="justify-content: center">
+                <p>
+                  In the case of cloud enabled, the behavior of the <code>playTextToSpeechLocally</code> function
+                  is the following: receives text as paramter, then fetches the
+                  <code>/api/otc/watson/text-to-speech</code> endpoint on our server to synthesize the speech. The
+                  response will be an Mp3 blob that is turned into a blob and injected into an audio element in the root
+                  window.
+                </p>
+                <p>In case the user starts a new recording while voice response is still playing, we want the audio to
+                  stop and in order to not overlap with what the user is saying. To achieve this we attach the
+                  <code>stopSpeech</code>
+                  function as a hook to the <code>RecorderComponent</code>, that stops the
+                  audio from playing when a new recording is initiated. It check if the audio is playing both in the
+                  case when IBM Watson or Ask Bob is enabled and, if it is, then it will stop the audio.</p>
+              </div>
+              <div class="col-lg-5">
+                <img class="img-fluid" style="width: 100%; min-width: 400px; max-width: 600px;  margin: 0 0 30px 0;"
+                  src="images/impl/stop-speech-function.png" alt="alt">
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 30px !important; justify-content: center">
+              <div class="col-lg-10">
+                <h2 style=" padding-bottom: 5px; margin-bottom: 15px; margin-top: 10px">
+                  Running the Application Locally
+                </h2>
+                <p>
+                  As mentioned in our research Docker allows us to contain user data on the local device, improving
+                  privacy, while
+                  providing cross-platform capabilities. Using Docker Compose we have containerized all our services
+                  (App, Server,MongoDB, Ask Bob, Concierge) and allowed them to communicate on the private Docker host
+                  network.
+                </p>
+                <p>
+                  On our docker branch there is an installation batch file that would install docker, therefore
+                  simplifying the local
+                  deployment process, enabling fast deployment in care-homes and other suitable places.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        </section>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li>
+          <a href="https://github.com/UCL-COMP0016-Team-38/FISE-Lounge" class="icon brands alt fa-github"><span
+              class="label">GitHub</span></a>
+        </li>
+      </ul>
+      <ul class="copyright">
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

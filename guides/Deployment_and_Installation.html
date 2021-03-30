@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="ibm-fise-lounge---an-interactive-and-privacy-safe-video-calling-platform-for-those-in-social-isolation">IBM FISE Lounge - an interactive and privacy safe video-calling platform for those in social isolation</h1>
+<p><a href="https://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/License-AGPL v3-blue.svg" alt="License: AGPL v3"></a>
+<a href="https://github.com/dwyl/esta/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome"></a></p>
+<blockquote>
+<p>IBM FISE Lounge is an application that acts as a smart, privacy-safe, and interactive video-calling platform for the elderly and others to use in the current pandemic, and other situations where social isolation is a major issue. It provides a simple interface with a standalone administrative dashboard for more tech-savvy relatives to set up the Lounge app and preferences on the elderly relative's behalf.</p>
+<p>The application is a part of the integrated FISE Ecosystem that includes <a href="https://github.com/UCL-COMP0016-2020-Team-39/AskBob">FISE AskBob</a> and <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team25">FISE Concierge</a>.</p>
+</blockquote>
+<p><img src="../images/Multidevice.png"alt text"></p>
+<h2 id="key-features">Key Features:</h2>
+<ol>
+<li>Option to Privacy. Use IBM Watson (cloud) or FISE AskBob (localized and privacy-safe) for voice commands.</li>
+<li>Reliable video-calling using the open-soruce Jitsi API.</li>
+<li>Accessible invites through SMS or Email - users contacts do not need an account.</li>
+<li>Emergency messages via SMS.</li>
+<li>Extendable plugins (games, BBC news feed, etc.)</li>
+<li>Interactive and customizable 360-VR, static or URL backgrounds.</li>
+<li>Simple interface suitable for elderly - the UI is based on modern gerontological studies</li>
+</ol>
+<h2 id="contributors">Contributors:</h2>
+<p>This project has been developed by a group of students at University College London, supervised by Dr Dean Mohamedally (UCL) and John McNamara (IBM)</p>
+<ul>
+<li>Daniel Javadinejad (UCL)</li>
+<li>Radu Echim (UCL)</li>
+<li>Adam Piwowarczyk (UCL)</li>
+<li>Jeremy Lo Ying Ping (UCL)</li>
+<li>Ak Ihoeghinlan (UCL)</li>
+<li>Calin Hadarean (UCL)</li>
+<li>Adam Peace (UCL)</li>
+<li>Emil Almazov (UCL)</li>
+<li>Rikaz Rameez (UCL)</li>
+<li>Mohammad Syed (UCL)</li>
+<li>Ernest Nkansah-Badu (UCL)</li>
+</ul>
+<h2 id="project-structure">Project Structure</h2>
+<p>This repository contains both the web app for FISE (in <a href="app"><code>/app</code></a>) as well as the administrative dashboard and API (in <a href="server"><code>/server</code></a>).</p>
+<p>Application is a React app (<a href="app"><code>/app/</code></a>)</p>
+<ul>
+<li>static assets in <a href="app/public"><code>./public/</code></a></li>
+<li>frontend pages available <a href="app/src/pages"><code>./src/pages/</code></a></li>
+<li>components in <a href="app/src/components"><code>./src/components/</code></a></li>
+<li>utility functions in <a href="app/src/util"><code>./src/utils/</code></a></li>
+<li>CSS styles in <a href="app/src/styles"><code>./src/styles/</code></a></li>
+<li>component tests with Jest and Enzyme in <a href="app/test"><code>./test/</code></a></li>
+<li>environment file example <a href="app/.env.local.example"><code>./.env.local.example</code></a> (must be renamed to <code>.env.local</code> on deployment)</li>
+</ul>
+<p>Server is a Next.js app (<a href="server"><code>/server/</code></a>)</p>
+<ul>
+<li>static assets in <a href="server/public"><code>./public/</code></a></li>
+<li>UI pages available <a href="server/pages"><code>./src/pages/</code></a> and <a href="server/pages/dashboard"><code>./src/pages/dashboard</code></a></li>
+<li>components in <a href="server/src/components"><code>./src/components/</code></a></li>
+<li>API Endpoints in <a href="server/pages/api"><code>./src/pages/api</code></a></li>
+<li>utility functions in <a href="server/src/utils"><code>./src/utils/</code></a></li>
+<li>shared library files in <a href="server/src/lib"><code>./src/lib/</code></a></li>
+<li>environment file example <a href="server/.env.local.example"><code>./.env.local.example</code></a> (must be renamed to <code>.env.local</code> on deployment)</li>
+</ul>
+<p>Below is the System Architecture Diagram:</p>
+<p><img src="fise-sad-v4.png" alt="alt text"></p>
+<h1 id="installation">Installation</h1>
+<h2 id="docker-installation">Docker Installation</h2>
+<p>We recommend you to use docker for production deployment on user devices as it is privacy-safe due to all services running locally. Docker will install the app, server, FISE AskBob and FISE concierge together. If you're on a Windows device we have provided a batch file that will get everything up and running with one-click. You can find our guide on how to install and deploy docker <a href="/%5Brepo%5D/tree/docker/docs/docker_installation/docker_installation.md">here in the docker branch</a>. If the link doesn't work, switch to the docker branch and enter <code>docs/docker_installation/docker_installation.md</code>.</p>
+<p>If you are currently in the docker branch, and you have docker installed, you can either run the <code>docker.bat</code> (Windows only), or write the following commands in your terminal:</p>
+<pre class="hljs"><code><div>docker-compose up
+</div></code></pre>
+<p><strong>Note: don't forget that you need to fill in the environment variables (<code>.env.files</code>) for both the <code>/server</code> and <code>/app</code> before running docker.</strong> You can create the .env.files that need to be filled in by running <code>create-env-files.bat</code> (Windows only) or you can write the following in your terminal</p>
+<pre class="hljs"><code><div>cd app
+cp cp .env.local.example .env.local
+cd ..
+cd server
+cp .env.local.example .env.local
+</div></code></pre>
+<p>If you want to use the MongoDB database that is built inside the container the following credentials in <code>\server\env.local</code></p>
+<pre class="hljs"><code><div>MONGODB_URI=&quot;mongodb://mongo:27017&quot;
+MONGODB_DB=&quot;mongo&quot;
+</div></code></pre>
+<h2 id="server-installation">Server Installation</h2>
+<p>Note: Our documentation uses yarn commands, but npm will also work. You can compare yarn and npm commands in the yarn docs, <a href="https://classic.yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison">here</a>.</p>
+<p>Ensure you have <code>yarn</code> installed (or npm)</p>
+<ul>
+<li><code>cd server</code></li>
+<li><code>yarn install</code></li>
+<li><code>cp .env.local.example .env.local</code> (This file should never be tracked, only the example)</li>
+<li>Fill in all the missing details in <code>server/.env.local</code>, follow the <a href="#environment-variables">Environment Variables</a> guide</li>
+<li>To begin development: <code>yarn dev</code></li>
+<li>To build for production: <code>yarn build</code></li>
+<li>To serve production build: <code>yarn start</code></li>
+</ul>
+<h2 id="app-installation">App Installation</h2>
+<p>Ensure you have <code>yarn</code> installed (or npm)</p>
+<ul>
+<li><code>cd app</code></li>
+<li><code>yarn install</code></li>
+<li><code>cp .env.local.example .env.local</code> (This file should never be tracked, only the example)</li>
+<li>Fill in all the missing details in <code>app/.env.local</code>, follow the <a href="#environment-variables">Environment Variables</a> guide</li>
+<li>To begin development: <code>yarn dev</code></li>
+<li>To build for production: <code>yarn build</code></li>
+<li>To serve production build: <code>yarn start</code></li>
+</ul>
+<h1 id="deployment">Deployment</h1>
+<p>Note: There are many ways to deploy both the app and server, you are not restricted to using the services we mention.</p>
+<h2 id="deploying-the-server">Deploying the Server</h2>
+<p>Easiest way (local): Docker</p>
+<p>Easiest way (cloud): Vercel</p>
+<ul>
+<li>Sign up / in to your Vercel account</li>
+<li>Create a new project</li>
+<li>Select &quot;Import Git Repository&quot; and import your copy of this repository.</li>
+<li>Select the server folder (you should see a Next JS logo by the folder)</li>
+<li>Add all env variables that are in <code>/server/.env.local.example</code></li>
+<li>(NB: Adding <code>VERCEL_URL</code> will autopopulate based on whether the build is production or preview)</li>
+</ul>
+<p>Otherwise (cloud): Azure, DigitalOcean, AWS, IBM Cloud etc.</p>
+<h2 id="deploying-the-app">Deploying the App</h2>
+<p>Easiest way (local): Docker</p>
+<p>Easiest way (cloud): Vercel</p>
+<ul>
+<li>Connect repo to Vercel</li>
+<li>Add all env variables that are in <code>/app/.env.local.example</code></li>
+</ul>
+<p>Otherwise (local):</p>
+<ul>
+<li>Follow the above instructions for <a href="#app-installation">App Installation</a> and expose port of choice</li>
+</ul>
+<p>Otherwise (cloud): Azure, AWS, IBM Cloud (Virtual Machines) and similiar</p>
+<ul>
+<li>Follow the above instructions for <a href="#app-installation">App Installation</a> and expose port of choice</li>
+</ul>
+<h2 id="environment-variables">Environment Variables</h2>
+<p>Env variables follow the <code>KEY=VALUE</code> format. A <code>VALUE</code> that contains white-spaces must be wrapped in quotes (i.e. <code>KEY=&quot;VALUE WITH WHITESPACE&quot;</code>).</p>
+<p>Server:</p>
+<ul>
+<li>
+<p><code>JITSI_MEET_URL</code>: URL of Jitsi Meet instance (can use <code>meet.jit.si</code>).</p>
+</li>
+<li>
+<p><code>SESSION_COOKIE_SECRET</code>: a 32-digit base 10 number, used for encrypting the session cookie.</p>
+</li>
+<li>
+<p><code>NEXT_PUBLIC_APP_URL</code>: URL of running app instance (used for adding link to app from dashboard pages).</p>
+</li>
+<li>
+<p>Database Env Variables:</p>
+<ul>
+<li><code>MONGODB_URI</code>: URI of MongoDB database instance (i.e. for Docker <code>mongodb://mongo:27017</code>). Might need to add database name at the end of the URI path as such <code>mongodb://mongo:27017/databaseName</code>.</li>
+<li><code>MONGODB_DB</code>: MongoDB Database name (in <a href="https://www.w3schools.com/tags/ref_urlencode.ASP">HTML URL Encoding</a> format).</li>
+</ul>
+</li>
+<li>
+<p>SMS &amp; Email Env Variables:</p>
+</li>
+<li>
+<p><code>EMAIL_HOST</code>: email service provider host URL.</p>
+</li>
+<li>
+<p><code>EMAIL_PROVIDER_USERNAME</code>: email from the service provider (i.e. <code>example@example.uk</code>).</p>
+</li>
+<li>
+<p><code>EMAIL_PROVIDER_PASS</code>: password of the email account or external password from the service provider.</p>
+</li>
+<li>
+<p><code>EMAIL_FROM</code>: email sender name, appears as sender in emails.</p>
+</li>
+<li>
+<p><code>SMS_ENDPOINT</code>: SMS API endpoint (we recommend using <a href="https://d7networks.com/">D7SMS</a>).</p>
+</li>
+<li>
+<p><code>SMS_API_KEY</code>: SMS API key provided</p>
+</li>
+<li>
+<p><code>SMS_FROM</code>: sender name, appears as sender in sent SMS messages.</p>
+</li>
+<li>
+<p>IBM Watson Env Variables:</p>
+<ul>
+<li>
+<p><code>STT_ENDPOINT</code>: Watson Speech to Text endpoint URL.</p>
+</li>
+<li>
+<p><code>STT_API_KEY</code>= Watson Speech to Text API key.</p>
+</li>
+<li>
+<p><code>WATSON_ENDPOINT</code>: Watson Assistant enpoint URL.</p>
+</li>
+<li>
+<p><code>WATSON_API_KEY</code>: Watson Assistant API key.</p>
+</li>
+<li>
+<p><code>WATSON_ASSISTANT_ID</code>: Watson Assistant instance ID (find how to get the Watson Assistant instance ID, <a href="https://stackoverflow.com/questions/53269368/ibm-cloud-watson-assistant-how-to-get-the-id-of-a-workspace">here</a>).</p>
+</li>
+<li>
+<p><code>TTS_ENDPOINT</code>: Text to Speech endpoint URL.</p>
+</li>
+<li>
+<p><code>TTS_API_KEY</code>=&quot;48Lqv3DPHQzjbc9pVP7lU_kVlY0UPngbiiQ_flyUWMbg&quot;</p>
+</li>
+</ul>
+<p>IBM Watson Docs on how to get started with Watson services:</p>
+<ul>
+<li><a href="https://cloud.ibm.com/docs/assistant?topic=assistant-getting-started">Watson Assistant</a></li>
+<li><a href="https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-gettingStarted">Text to Speech</a></li>
+<li><a href="https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-gettingStarted">Speech to Text</a></li>
+</ul>
+</li>
+<li>
+<p>Askbob Env Variables:</p>
+<ul>
+<li><code>ASKBOB_ENDPOINT</code>: URL of Ask Bob running instance (i.e. with Docker <code>http://localhost:8000</code>)</li>
+</ul>
+</li>
+</ul>
+<p>Application:</p>
+<ul>
+<li><code>REACT_APP_SERVER_URL</code>: URL of server (used as target URL for Server API request)</li>
+<li><code>REACT_APP_ASKBOB_URL</code>: URL of running Ask Bob instance (used as target URL for voice command requests)</li>
+</ul>
+<h1 id="application-documentation">Application Documentation</h1>
+<h2 id="features-overview">Features Overview</h2>
+<ul>
+<li>
+<p><strong>Modern technologies</strong> - Running on React.</p>
+</li>
+<li>
+<p><strong>No complex login</strong> - Consumers only need to enter their One-Time Code, which will be cached to the browser.</p>
+</li>
+<li>
+<p><strong>Personalize your Lounge</strong> - Customizable and interactive 360-VR, static or URL backgrounds, custom profile images for contacts.</p>
+</li>
+<li>
+<p><strong>Research grade UI</strong> - UI design based on gerontological research, optimized for improving
+elderly's experience.</p>
+</li>
+<li>
+<p><strong>Voice commands</strong> - Responsive voice commands that provide consumers their personal AI assistant. The Ask Bob assistant option provides additional functionality while also implementing privacy measures.</p>
+</li>
+<li>
+<p><strong>Extensible Plugins</strong> - The lounge experience enables consumers to access BBC live news feed, online games such as chess, checkers, 70's TV Show Quiz, embedded videos and website pages from the Plugins panel. Moreover, plugins have been designed to allow further development and enable clients to modify the application to suit their needs.</p>
+</li>
+<li>
+<p><strong>Reliable videocalling</strong> - Consumers can call contact their dearest through the Jitsi video-calling API.</p>
+</li>
+<li>
+<p><strong>Privacy-safe</strong> - Privacy features that keep user data locally, far from cloud and external sources by running the application locally together with its services. If Ask Bob and local speech synthesis are enabled by the administrator, data will not leave the device.</p>
+</li>
+<li>
+<p><strong>Integrated in FISE ecosystem</strong> - Voice commands enbale consumers to access the feature rich APIs of the FISE ecosystem such as Concierge while also keeping privacy first.</p>
+</li>
+<li>
+<p><strong>Simple installation process</strong> - We provide detailed installation guide for deploying the application locally on devices. In addition, &quot;one-click&quot; installation scripts are provided to facilitate this process.</p>
+</li>
+</ul>
+<h1 id="server-documentation">Server Documentation</h1>
+<h2 id="overview">Overview</h2>
+<ul>
+<li>
+<p><strong>Modern technologies</strong> - Running on NextJS 9 (different to Express, look it up and be familiar with ES5/ES6 syntax).</p>
+</li>
+<li>
+<p><strong>Option rich dashboard</strong> - Consumers' experience is easily customizable by the account administrator from the dashboard. Options include using Ask Bob or IBM Watson assitant services, using IBM Watson Text-to-Speech features or the WebAPI Speech Synthesizer available in most browsers, easily customize backgrounds and contacts data or profile images, etc.</p>
+</li>
+<li>
+<p><strong>Privacy-safe</strong> - Encrypted session cookies for holding sensitive information locally. Authentication handled by Passport and sign-up by the Crypto Node.js module. Storage in MongoDB can be deployed as a local service on the device, removing data exposure.</p>
+</li>
+<li>
+<p><strong>API</strong> - Enables option configuration and account creation by proxying client requests to our database.</p>
+</li>
+<li>
+<p><strong>Email &amp; SMS API</strong> - Send SMS and email invitations for videocalling on consumer demand. In addition, our emergency system can alert the contacts of a consumer who is in need of help through the SMS &amp; email API.</p>
+</li>
+</ul>
+<h2 id="data-types">Data Types</h2>
+<h3 id="user">User</h3>
+<ul>
+<li>The actual account administrator</li>
+<li>They manage the <em>Consumer</em>'s FISE account and set it up on the <em>Consumer</em>'s device</li>
+<li>They can add mutiple <em>Consumer</em>s and add multiple <em>Contact</em>s per <em>Consumer</em></li>
+<li>This is the only person who ever accesses the Dashboard</li>
+</ul>
+<h3 id="consumer">Consumer</h3>
+<ul>
+<li>The elderly person with difficulty contacting their relatives (example)</li>
+<li>This person's data will show up on the FISE app</li>
+<li>Can be related to multiple <em>Contact</em>s</li>
+</ul>
+<h3 id="contact">Contact</h3>
+<ul>
+<li>Someone the <em>Consumer</em> can call</li>
+<li>Will receive an email when called through the app</li>
+<li>Will receive an email containing emergency voice-clip when sent through the app</li>
+</ul>
+<p>If phone number provided:</p>
+<ul>
+<li>Will receive an sms when called through the app</li>
+<li>Will receive an sms containing emergency voice-clip when sent through the app</li>
+</ul>
+<h1 id="server-api-routes">Server API Routes</h1>
+<h2 id="apilogin"><code>/api/login</code></h2>
+<h3 id="post">POST</h3>
+<p>Parameters:</p>
+<ul>
+<li>email=[string]</li>
+<li>password=[string]</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ &quot;done&quot;: true }</code></li>
+</ul>
+<h2 id="apilogout"><code>/api/logout</code></h2>
+<h3 id="post">POST</h3>
+<p>Parameters: None</p>
+<p>Success:</p>
+<ul>
+<li>Code <code>304</code></li>
+<li>response with <code>Location</code> header redirects root URL <code>/</code></li>
+</ul>
+<h2 id="apisignup"><code>/api/signup</code></h2>
+<h3 id="post">POST</h3>
+<p>Parameters:</p>
+<ul>
+<li>email=[string]</li>
+<li>password=[string]</li>
+<li>name=[string]</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ &quot;done&quot;: true }</code></li>
+</ul>
+<h2 id="apiuser"><code>/api/user</code></h2>
+<h3 id="get">GET</h3>
+<p>Gets the current (based on session) user's data</p>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ data: { user: { name, email, consumers }}}</code></li>
+</ul>
+<p>User not found or no database access:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ data: null, message: &quot;Unauthorized&quot; }</code></li>
+</ul>
+<h2 id="apiuserdelete"><code>/api/user/delete</code></h2>
+<h3 id="delete">DELETE</h3>
+<p>Revokes the current user's session</p>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Deleted successfully&quot; }</code></li>
+</ul>
+<h2 id="apiconsumer"><code>/api/consumer</code></h2>
+<h3 id="post">POST</h3>
+<p>Create a new consumer</p>
+<p>Paramaters:</p>
+<ul>
+<li>name=[string]</li>
+<li>isCloudEnabled=[boolean | string]</li>
+<li>isSnowEnabled=[boolean | string]</li>
+<li>isWatsonTtsEnabled=[boolean | string]</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Consumer added successfully&quot;, data: consumer }</code></li>
+</ul>
+<h2 id="apiconsumerconsumerid"><code>/api/consumer/:consumer_id</code></h2>
+<h3 id="get">GET</h3>
+<p>Get the corresponding consumer data</p>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Consumer Data found&quot;, data: consumer }</code></li>
+</ul>
+<h3 id="put">PUT</h3>
+<p>Update the corresponding consumer's data</p>
+<p>Parameters:</p>
+<ul>
+<li>name=[string]</li>
+<li>isCloudEnabled=[boolean | string]</li>
+<li>isSnowEnabled=[boolean | string]</li>
+<li>isWatsonTtsEnabled=[boolean | string]</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Consumer updated successfully&quot;, data: { ...consumer, consumer_id }, }</code></li>
+</ul>
+<h3 id="delete">DELETE</h3>
+<p>Delete the corresponding consumer</p>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Consumer Deleted successfully&quot; }</code></li>
+</ul>
+<h3 id="post">POST</h3>
+<p>Refreshes one-time-code of the corresponding consumer</p>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Consumer updated successfully&quot;, data: { ...consumer, consumer_id }, }</code></li>
+</ul>
+<h2 id="apicontact"><code>/api/contact</code></h2>
+<h3 id="post">POST</h3>
+<p>Create a new contact</p>
+<p>Parameters:</p>
+<ul>
+<li>consumer_id=[string]</li>
+<li>name=[string]</li>
+<li>email=[string]</li>
+<li>profileImage=[string] (should be <code>Base64</code> encoded)</li>
+<li>relation=[integer 0-10]</li>
+<li>phone=[string, valid phone number] (JS regex: <code>/^\+[1-9]\d{1,14}$/</code>)</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Contact added successfully&quot;, data: newContact }</code></li>
+</ul>
+<p>Contact already exists:</p>
+<ul>
+<li>Code: <code>400</code></li>
+<li>Content: <code>{ message: &quot;A contact with that email already exists&quot; }</code></li>
+</ul>
+<h2 id="apicontactcontactid"><code>/api/contact/:contact_id</code></h2>
+<h3 id="get">GET</h3>
+<p>Get the corresponding contact data</p>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Contact Data found&quot;, data: { contact, consumer_id, consumer_name }</code></li>
+</ul>
+<h3 id="put">PUT</h3>
+<p>Update the corresponding contact's data</p>
+<p>Parameters:</p>
+<ul>
+<li>consumer_id=[string]</li>
+<li>name=[string]</li>
+<li>email=[string]</li>
+<li>profileImage=[string] (should be <code>Base64</code> encoded)</li>
+<li>relation=[integer 0-10]</li>
+<li>phone=[string, valid phone number] (JS regex: <code>/^\+[1-9]\d{1,14}$/</code>)</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Contact updated successfully&quot;, data: { newContact, consumer_id }</code></li>
+</ul>
+<h3 id="delete">DELETE</h3>
+<p>Delete the corresponding contact</p>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Contact Deleted successfully&quot;, data: { consumer_id }}</code></li>
+</ul>
+<h2 id="apiotcotc"><code>/api/otc/:otc</code></h2>
+<h3 id="get">GET</h3>
+<p>Get the corresponding consumer's data</p>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Data found&quot;, data: consumer }</code></li>
+</ul>
+<h3 id="post">POST</h3>
+<p>Sends a call notification email and/or SMS to the desired contact</p>
+<p>Parameters:</p>
+<ul>
+<li>
+<p>contact_id=[string]</p>
+</li>
+<li>
+<p>Optional:</p>
+<ul>
+<li>sms=[boolean]</li>
+</ul>
+</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Invite email Sent successfully&quot; }</code></li>
+</ul>
+<p>On both email and SMS services error:</p>
+<ul>
+<li>Code: <code>500</code></li>
+<li>Content: <code>{ message: &quot;Both email and sms services are not responding&quot; }</code></li>
+</ul>
+<h2 id="apiotcwatsonotc"><code>/api/otc/watson/:otc</code></h2>
+<h3 id="post">POST</h3>
+<p>Parse audio through IBM Watson API</p>
+<p>Parameters:</p>
+<ul>
+<li><code>req.body</code> should be <code>Base64</code> encoded <code>audio/mp3</code></li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ data: { action, contact_id, text, reply }}</code>
+<ul>
+<li>action: intent recognized by Watson Assistant [<code>&quot;startCall&quot;</code> | <code>&quot;changeBackground&quot;</code> | <code>&quot;startExercise&quot;</code>]</li>
+<li>contact_id: if action is <code>&quot;startCall&quot;</code>, the contact_id of the callee</li>
+<li>text: string text resulted from transcribing the speech</li>
+<li>reply: text reply from Watson Assistant</li>
+</ul>
+</li>
+</ul>
+<p>No intent recognized by Watson Assistant:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Watson couldn't recognize intents&quot;, data: { action, contact_id, text, reply }}</code></li>
+</ul>
+<h2 id="apiotctext-to-speechotc"><code>/api/otc/text-to-speech/:otc</code></h2>
+<h3 id="post">POST</h3>
+<p>Synthesize speech from text</p>
+<p>Parameters:</p>
+<ul>
+<li>text=[string]</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: body containing the synthesized speech as <code>audio/wav</code></li>
+</ul>
+<h2 id="apiotcemergencyotc"><code>/api/otc/emergency/:otc</code></h2>
+<h3 id="post">POST</h3>
+<p>Send emergency message to all contacts</p>
+<p>Parameters:</p>
+<ul>
+<li>text=[string]</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Invite Sent successfully&quot; }</code></li>
+</ul>
+<p>On both email and SMS services error:</p>
+<ul>
+<li>Code: <code>500</code></li>
+<li>Content: <code>{ message: &quot;No emergency message was sent&quot; }</code></li>
+</ul>
+<h2 id="apibackgrounds"><code>/api/backgrounds/</code></h2>
+<h3 id="post">POST</h3>
+<p>Adds corresponding background to consumer's backgrounds</p>
+<p>Parameters:</p>
+<ul>
+<li>imageFile=[string] (should be <code>Base64</code> encoded or <code>URL</code> string)</li>
+<li>imageName=[string]</li>
+<li>isVR=[boolean]</li>
+<li>consumer_id=[string]</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;New background uploaded successfully&quot; }</code></li>
+</ul>
+<h3 id="delete">DELETE</h3>
+<p>Deletes the corresponding background</p>
+<p>Parameters:</p>
+<ul>
+<li>image_id=[string]</li>
+<li>consumer_id=[string]</li>
+</ul>
+<p>Success:</p>
+<ul>
+<li>Code: <code>200</code></li>
+<li>Content: <code>{ message: &quot;Background deleted successfully&quot;, }</code></li>
+</ul>
+<h1 id="ibm-watson-voice-commands">IBM Watson Voice Commands</h1>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Register an IBM Cloud account</li>
+<li>Create <em>Watson Assistant</em>, <em>Speech-To-Text</em> and <em>Text-To-Speech</em> resources</li>
+<li>Add service credentials for respective resource in server <code>.env.local</code>.</li>
+<li>For <code>WATSON_ASSISTANT_ID</code> only add key following ServiceId-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</li>
+<li>Launch Watson Assistant inside IBM Cloud</li>
+<li>Create <em>dialog skill</em> by uploading <code>watson_skill.json</code> that you find in the <code>/server</code> folder</li>
+</ul>
+<h2 id="valid-commands">Valid commands</h2>
+<ul>
+<li>Change background</li>
+<li>Call [contact name]</li>
+</ul>
+<p>If you want any other <em>custom</em> commands, you can create using IBM watson dialogues.
+Read <a href="https://cloud.ibm.com/docs/assistant?topic=assistant-getting-started">this</a> guide to get started.</p>
+<h1 id="askbob-voice-commands">AskBob voice commands</h1>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Follow AskBob's installation guide <a href="https://github.com/UCL-COMP0016-2020-Team-39/AskBob">here</a> or use above mentioned docker instalaltion</li>
+<li>Ensure that the required deepspeech models are downloaded</li>
+<li>Ensure that FISE plugins are downloaded</li>
+<li>Add the AskBob instance URL in <code>app/.env.local</code></li>
+</ul>
+<h2 id="valid-commands">Valid commands</h2>
+<h3 id="default">Default</h3>
+<ul>
+<li>Change background</li>
+<li>Call [contact name]</li>
+</ul>
+<h3 id="fise-concierge-utilities">FISE Concierge Utilities</h3>
+<ul>
+<li>What's the weather at different locations</li>
+<li>What's the air quality at different locations</li>
+<li>What's the defintion of words</li>
+<li>What's the synonym of words</li>
+</ul>
+<h3 id="fise-concierge-food">FISE Concierge Food</h3>
+<ul>
+<li>Tell me a recipe for certain food</li>
+<li>Tell me a recipe by ingredient</li>
+<li>Tell me random recipe</li>
+</ul>
+<h3 id="fise-concierge-food">FISE Concierge Food</h3>
+<ul>
+<li>Value of a stock</li>
+<li>Charities in a location</li>
+</ul>
+<h3 id="fise-concierge-food">FISE Concierge Food</h3>
+<ul>
+<li>Value of a stock</li>
+<li>Charities in a location</li>
+</ul>
+<h1 id="plugins">Plugins</h1>
+<p><img src="fise-plugin-compilation.png" alt="alt text"></p>
+<p>The Plugin component is <a href=""><code>app/components/Plugin.jsx</code></a>. This is wrapped by the <a href=""><code>app/components/PluginComponent.jsx</code></a> component in an iframe.</p>
+<p>To add new plugins, modify the return value of the <code>Plugin</code> component by adding your custom html and JS. If any variable initialization is needed, it can be added to the <code>useEffect</code> hook of the component.</p>
+<p>We have provided an example of the things you can achieve with <a href=""><code>Plugin</code></a>, these include online games (chess, checkers, 70's TV Show, etc.), live BBC news feed, Coronavirus informational videos, etc.</p>
+
+</body>
+</html>

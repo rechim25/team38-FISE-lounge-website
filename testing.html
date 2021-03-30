@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Testing - Team 38 - IBM2 FISE</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="index.html">IBM2 FISE</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="uidesign.html">UI Design</a></li>
+            <li><a href="sysdesign.html">System Design</a></li>
+            <li><a href="requirements.html">Requirements</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="testing.html">Testing</a></li>
+            <li><a href="evaluation.html">Evaluation</a></li>
+            <li><a href="appendices.html">Appendices</a></li>
+            <li><a href="elements.html">Elements</a></li>
+            <li><a href="legal.html">Legal</a></li>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main" class="wrapper style1">
+        <div class="container">
+          <header class="major">
+            <h2>Testing</h2>
+          </header>
+
+          <!-- Content -->
+          <section id="content">
+            <h3>Testing Strategy</h3>
+            <p>
+              Following discussions with our clients, we decided to use a testing philosophy 
+              that focused on the end-users, primarily responsive design and user acceptance 
+              testing. With limited time, and frequent updates of requirements we, together 
+              with the clients, took the decision not to put i.e. unit testing as a priority.
+              Particularly since we are only working on a proof of concept.
+            </p>
+                
+            <h3>Responsive design testing</h3>
+            <p>
+              In line with our client's requirement of “cross-platform functionality”, responsive 
+              design testing has been of significance to ensure that our program is usable across 
+              different devices and screen types. To cover this extensively, we have:
+            </p>
+            
+            <ul>
+              <li>Manually deployed and tried our program on various devices and platforms </li>
+              <li>Used device emulators provided by browsers (Chrome, Edge, Safari, Firefox) </li>
+            </ul>
+
+            <h4>Some of the devices used for testing</h4>
+              <ul class="alt">
+                <li>iPad (iOS)</li>
+                <li>iPhone (iOS)</li>
+                <li>OnePlus (Android Phone)</li>
+                <li>MacBook (Mac OS)</li>
+                <li>Dell Laptop (Windows)</li>
+                <li>Custom Desktop (Windows)</li>
+                <li>HP 2 in 1 Tablet (Windows)</li>
+                <li>Philips Smart TV</li>
+                <li>Samsung Smart TV</li>
+                <li>Intel NUC (Windows)</li>
+              </ul>
+
+            <p>Examples of emulated devices (on chrome) </p>
+            <div class="w3-content w3-display-container">
+              <img class="mySlides1" src="images/testimages/CustomResponsiveLaptop.jpg" style="max-height: 400px">
+              <img class="mySlides1" src="images/testimages/KindleFireX.jpg" style="max-height: 400px">
+              <img class="mySlides1" src="images/testimages/MotoG4.jpg" style="max-height: 400px">
+              <img class="mySlides1" src="images/testimages/Pixel2.jpg" style="max-height: 400px">
+              <img class="mySlides1" src="images/testimages/SurfaceDuo.jpg" style="max-height: 400px">
+              <img class="mySlides1" src="images/testimages/iPad.jpg" style="max-height: 400px">
+              <img class="mySlides1" src="images/testimages/Pixel2.jpg" style="max-height: 400px">
+              <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
+              <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
+            </div>
+            
+            <p>Examples of real devices </p>
+            <div class="w3-content w3-display-container">
+              <img class="mySlides2" src="images/testimages/HP_tablet.jpg" style="max-height: 400px">
+              <img class="mySlides2" src="images/testimages/first_ipad.jpeg" style="max-height: 400px">
+              <img class="mySlides2" src="images/testimages/TV.jpg" style="max-height: 400px">
+              <img class="mySlides2" src="images/testimages/Macbook_screen.jpg" style="max-height: 400px">
+              <img class="mySlides2" src="images/testimages/OnePlus_screenshot.jpg" style="max-height: 400px">
+              <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1)">&#10094;</button>
+              <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 1)">&#10095;</button>
+            </div>
+
+            <p>Despite limited access to devices due to the pandemic, we are satisified with the Responsive Design Testing we 
+              conducted. It h  elped us adapt our design to be suitable on multiple types of devies. 
+            </p>
+
+            <h3>Performance and web accessibility testing</h3>
+            <p><span class="image left"><img src="images/lighthouse/Vercel.jpg" alt="" /></span>Performance testing has been done
+              using Google’s lighthouse, an automated tool to assess performance, accessibility and
+              compliance with progressive web application standards [1]. For each webpage in our dashboard, and for our onboarding
+              and application main page we have conducted the testing. Key to achieve high scores was to do throughough due dilligence
+              on web application standards - particularly PWA for the main app -  and follow them. Furthermore, to alleviate the process of manually performing these tests we added a lighthouse pipeline to our Vercel
+              which we, in turn, had a separate pipeline to via our Azure DevOps repo. This meant that after each commit an automatic
+              lighthouse test would be performed. Something that helped us understand how each of our commits affected our respective
+              scores.
+              Following table shows the average test results
+              across all webpages for both our dashboard and app. Examples of full test reports can be found in appendix.</p>
+
+            <br>
+            <div class="table-wrapper">
+              <table class="alt">
+                <thead>
+                  <tr>
+                    <th>Page</th>
+                    <th>Performance Score</th>
+                    <th>Accessibility Score</th>
+                    <th>Best Practises Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>App</td>
+                    <td>98</td>
+                    <td>96</td>
+                    <td>99</td>
+                  </tr>
+                  <tr>
+                    <td>Dashboard</td>
+                    <td>99</td>
+                    <td>95</td>
+                    <td>93</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Compatibility testing</h3>
+            <p>Since we have a web-app, it is important to ensure that it is proficient enough to run across many browsers. For this
+            purpose, we ran both manual cross-browser testing and also automatic through BrowserStack (free version). Our results
+            were similar to what we had expected, particularly since we kept note of the browser requirement of many of the
+            functions used in our code. </p>
+            <p>
+            <b> Support for (tested version):</b> Chrome (89), Edge (89), Firefox (87), Safari (14), Opera (73)
+            <br> <b> No support for:</b> IE (11), Opera Mini (50)
+            </p>
+
+
+<h3>User acceptance testing</h3>
+<span class="image right"><img src="images/user-testing.jpg" alt=""/></span>
+<p>In order to gain an understanding of how user interaction would look within our system, and in order to identify
+  potential improvements, we asked 3 testers to carry out 3 different test cases within our platform. They were
+  sometimes provided with additional information wherever it wasn’t possible for them to test the full scope of a
+  feature (e.g. all the different voice commands). The test cases are detailed below, and we compiled the feedback we
+  received into a table. </p>
+
+<h4>Tasks</h4>
+<p><b> Test case 1 </b>
+  <br>The testers were given account details for the dashboard and asked to log in. They were tasked with creating a new
+  user, navigating to the add background page and uploading a new background for that user, and then adding a contact
+  and
+  setting a profile picture for that new contact. </p>
+
+<p><b> Test case 2 </b>
+  <br>We gave the testers a one-time code so that they could log in on the app. They were then tasked with changing the
+  background, opening and using the plugins tab, and calling a contact. </p>
+
+<p><b> Test case 3 </b>
+  <br>Again, we asked the testers to log into the app. This time, they were tasked with trying out the voice features by
+  sending an emergency message, asking for a weather forecast, and by using voice commands to call a contact. </p>
+
+<p>*In the feedback table, features are <i>italicised</i>.  </p>
+
+
+            <h3>Integration & Unit tests</h3>
+            <p> We have used Jest - a Javascript testing framework that can be used for React applications [2] - and Enzyme - a Javascript 
+              testing utlity that helps test React components [3] - demonstrate unit and integration testing. Per the request of our client 
+            we did not emphasize the use of these tests. However, we still found them useful in understanding the rendering process and
+           interactions between our components, particularly snapshot testing was useful in ensuring that our UI did not change unepexpectedly.</p>
+          
+
+            <h3>References</h3>
+            <p> [1] “Lighthouse,” Google.com. [Online]. Available: https://developers.google.com/web/tools/lighthouse. [Accessed:
+            01-Mar-2021].
+            <br> [2] “Jest · 🃏 delightful JavaScript testing,” Jestjs.io. [Online]. Available: https://jestjs.io/. [Accessed:
+            01-Mar-2021].
+            <br> [3] “Introduction · Enzyme,” Github.io. [Online]. Available: https://enzymejs.github.io/enzyme/. [Accessed:
+            01-Mar-2021].
+
+
+
+
+            </p>
+
+          </section>
+
+
+<script>
+  var slideIndex = [1, 1];
+  var slideId = ["mySlides1", "mySlides2"]
+  showDivs(1, 0);
+  showDivs(1, 1);
+
+  function plusDivs(n, no) {
+    showDivs(slideIndex[no] += n, no);
+  }
+
+  function showDivs(n, no) {
+    var i;
+    var x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) { slideIndex[no] = 1 }
+    if (n < 1) { slideIndex[no] = x.length }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex[no] - 1].style.display = "block";
+  }
+</script>
+
+  
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a href="https://github.com/UCL-COMP0016-Team-38/FISE-Lounge" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

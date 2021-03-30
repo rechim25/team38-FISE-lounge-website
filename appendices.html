@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Appendices - Team 38 - IBM2 FISE<</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="index.html">IBM2 FISE</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="uidesign.html">UI Design</a></li>
+            <li><a href="sysdesign.html">System Design</a></li>
+            <li><a href="requirements.html">Requirements</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="testing.html">Testing</a></li>
+            <li><a href="evaluation.html">Evaluation</a></li>
+            <li><a href="appendices.html">Appendices</a></li>
+            <li><a href="elements.html">Elements</a></li>
+            <li><a href="legal.html">Legal</a></li>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main" class="wrapper style1">
+        <div class="container">
+          <header class="major">
+            <h2>Appendix</h2>
+          </header>
+
+          <!-- Content -->
+          <section id="content">
+            <h3>Deployment</h3>
+            
+            <p>
+              All deployment information can be found in our readme - you can find our github page at the bottom of this page - and or in the following documents,
+            </p>
+            <p>
+              <b> Deployment & Installation. We recommend using docker as it is the easiest way to install all FISE projects at once locally.</b>
+              <br><a href="guides/Deployment_and_Installation.pdf">Deployment & Installation - PDF</a>
+              <br><a href="guides/Deployment_and_Installation.html">Deployment & Installation - HTML</a> 
+            </p>
+            <p>
+                <b> Docker installation if you do not have it installed </b>
+                <br><a href="guides/docker_installation.pdf">Docker Installation - PDF</a>
+                <br><a href="guides/docker_installation.html">Docker installation - HTML</a> 
+              </p>
+
+            <h3>User manual</h3>
+            <h4> Dashboard - This page is for an administrator i.e. a grandson or friend </h4>
+            <p>
+              If you have deployed your app locally (main method of running this app), i.e. with docker, you'll find this page on localhost:3000.
+            </p>
+
+            <ul>
+              <li>'Add a new user' and select your privacy settings.
+                <br> If you choose to enable cloud services all voice commands will run via IBM Watson.
+                <br> If you do not enable cloud services all voice commands will run via FISE AskBob.
+              </li>
+              <li>You can now add contacts and upload custom background using an image URL.</li>
+              <li>Now copy the one-time-code and enter the app.</li>
+
+            </ul>
+
+            <h4> App - This is the main app that will be used by i.e. elderly </h4>
+            <p>
+              If you have deployed your app locally (main method of running this app), i.e. with docker, you'll find this page on localhost:3001. If in production without docker you might find it at localhost:5000.
+            </p>
+
+            <p>
+             We highly recommend that you have this app installed to your device as this makes the website more accessible. A guide on how to do this can be found in the bottom of this page.
+            </p>
+
+            <span class="image fit">
+                <img src="images/iPad_emulator_explained.png" alt="" />
+              </span>
+
+            <ul>
+              <li>Enter the app by using the one-time-code. This code will be cached so that you do not need to enter it each time you log in.</li>
+              <li>Press on a contact to video-call them. This will send an email invite (and sms if phone number was provided) with a link for them to join the call.</li>
+              <li>Press the top-left icon to change the background.</li>
+              <li>Press the bottom-left icon to record and send an emergency message.</li>
+              <li>Press the bottom-right icon to open plugins (i.e. games, news, covid information).</li>
+              <li>Press the top-right icon to do voice commands:
+                <br> Default voice commands are "change background" and "call [contact]". If you want other voice commands you need to
+                disable cloud features so that it runs via FISE AskBob. You can find a list of all FISE AskBob and FISE concierge
+                commands in their documentation, or our documentation above.
+              </li>
+            </ul>
+
+            <h4> Installing the PWA app</h4>
+            <p> 1. "App available" will be displayed </p>
+            <span class="image fit">
+                <img src="images/app_install/Appavailable.jpg" alt="" />
+              </span>
+            <p> 2. "Install FISE Lounge app" will pop-up, press install. </p>
+            <span class="image fit">
+                <img src="images/app_install/Appinstall.jpg" alt="" />
+              </span>
+              <p> You can now find the app in your home menu </p>
+              <span class="image fit">
+                  <img src="images/app_install/Appdownload.jpg" alt="" />
+                </span>
+
+          <h3>Extra material</h3>
+          <p>Example of full lightouse tests</p>
+          <br><a href="light_tests/localhost_3003-20210317T225310.html" >L1</a>
+          <br><a href="light_tests/localhost_5000-20210317T222629.html">L2</a>
+          <br><a href="light_tests/localhost_3003-20210317T225530.html">L3</a>
+          <br><a href="light_tests/localhost_3003-20210317T231701.html">L4</a>
+
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a href="https://github.com/UCL-COMP0016-Team-38/FISE-Lounge" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
